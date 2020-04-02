@@ -17,9 +17,12 @@ namespace CSharp.Arrays
 
            // DescArr.Descending();
 
-           ReverseArr.Reverse();
+           //ReverseArr.Reverse();
+           // ReverseArr.Reverse_v2();
 
-            Console.ReadLine();
+           Fibonacci.Arr();
+
+           Console.ReadLine();
         }
     }
 }

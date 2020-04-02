@@ -28,5 +28,21 @@ namespace CSharp.Arrays
             for (x = 0; x < n; x++)
                 Console.Write(newArr[x] + " ");
         }
+
+        public static void Reverse_v2()
+        {
+            int[] arr = {5, 6, 9, 12, 15, 7, 3, 20, 14, 36 , 24};
+            int temp;
+            int i;
+            for (i = 0; i < arr.Length / 2; i++)
+            {
+                temp = arr[i];
+                arr[i] = arr[arr.Length - i - 1];
+                arr[arr.Length - i - 1] = temp;
+            }
+
+            foreach (var item in arr) Console.WriteLine(item);
+            Console.ReadKey();
+        }
     }
 }
