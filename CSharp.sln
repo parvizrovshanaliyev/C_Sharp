@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C058F33F-5CD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeBook", "FundamentalsCourseOne\gradebook\src\GradeBook\GradeBook.csproj", "{DDE8077B-AAD1-4D46-9EBB-42498AC5D05A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp.DesignPatterns", "CSharp.DesignPatterns", "{D0B39432-FDCF-4CDD-A2EB-0FD08715600C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.DesignPatterns.AbstractFactory", "CSharp.DesignPatterns\CSharp.DesignPatterns.AbstractFactory\CSharp.DesignPatterns.AbstractFactory.csproj", "{AEB60683-3694-442D-964C-8279470C77A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{DDE8077B-AAD1-4D46-9EBB-42498AC5D05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDE8077B-AAD1-4D46-9EBB-42498AC5D05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDE8077B-AAD1-4D46-9EBB-42498AC5D05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB60683-3694-442D-964C-8279470C77A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB60683-3694-442D-964C-8279470C77A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB60683-3694-442D-964C-8279470C77A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB60683-3694-442D-964C-8279470C77A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +73,7 @@ Global
 		{0F967B6B-4EB2-4797-9B89-624CE9D3E102} = {ADBDFE81-D7DB-46DC-8210-4A6294399AED}
 		{C058F33F-5CD6-4B2D-B50D-7581897A3890} = {0F967B6B-4EB2-4797-9B89-624CE9D3E102}
 		{DDE8077B-AAD1-4D46-9EBB-42498AC5D05A} = {C058F33F-5CD6-4B2D-B50D-7581897A3890}
+		{AEB60683-3694-442D-964C-8279470C77A0} = {D0B39432-FDCF-4CDD-A2EB-0FD08715600C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
