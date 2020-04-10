@@ -32,12 +32,12 @@ namespace CSharp.DesignPatterns.AbstractFactory {
         public override string State => "Open";
 
         public override bool Connect () {
-            System.Console.WriteLine ("SqlConnection baglantisi kuruluyor");
+            System.Console.WriteLine ("SqlConnection connected");
             return true;
         }
 
         public override bool DisConnect () {
-            System.Console.WriteLine ("SqlConnection bağlantısı kesiliyor.");
+            System.Console.WriteLine ("SqlConnection disConnected.");
             return false;
         }
     }
@@ -45,7 +45,7 @@ namespace CSharp.DesignPatterns.AbstractFactory {
     // Concrete Product
     class SqlCommand : Command {
         public override void Execute (string query) =>
-            System.Console.WriteLine ("SqlCommand sorgusu çalıştırıldı.");
+            System.Console.WriteLine ("SqlCommand query running.");
     }
 
     // Concrete Product
@@ -53,12 +53,12 @@ namespace CSharp.DesignPatterns.AbstractFactory {
         public override string State => "Open";
 
         public override bool Connect () {
-            System.Console.WriteLine ("MySqlConnection baglantisi kuruluyor");
+            System.Console.WriteLine ("MySqlConnection connected");
             return true;
         }
 
         public override bool DisConnect () {
-            System.Console.WriteLine ("MySqlConnection bağlantısı kesiliyor.");
+            System.Console.WriteLine ("MySqlConnection disConnected.");
             return false;
         }
     }
@@ -66,7 +66,7 @@ namespace CSharp.DesignPatterns.AbstractFactory {
     // Concrete Product
     class MySqlCommand : Command {
         public override void Execute (string query) =>
-            System.Console.WriteLine ("MySqlCommand sorgusu çalıştırıldı.");
+            System.Console.WriteLine ("MySqlCommand query running.");
     }
 
     // step 3 ###########################################################
