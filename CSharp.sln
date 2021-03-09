@@ -55,6 +55,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data.Types", "Data.Types", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.DataTypes", "CSharp.DataTypes\CSharp.DataTypes.csproj", "{0C399744-2713-405F-941F-D8F256DB12EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intro", "Intro", "{A36E35BA-5BDD-4857-A9AC-6943EA774F69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
