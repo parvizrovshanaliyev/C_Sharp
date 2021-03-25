@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CSharp.Arrays.MultiDimensionalArray;
 
 namespace CSharp.Arrays
 {
@@ -10,19 +11,27 @@ namespace CSharp.Arrays
     {
         static void Main(string[] args)
         {
-            
-           // AscArr.Ascending();
 
-           // Console.WriteLine("###########################");
+            // AscArr.Ascending();
 
-           // DescArr.Descending();
+            // Console.WriteLine("###########################");
 
-           //ReverseArr.Reverse();
-           // ReverseArr.Reverse_v2();
+            // DescArr.Descending();
 
-           Fibonacci.Arr();
+            //ReverseArr.Reverse();
+            // ReverseArr.Reverse_v2();
 
-           Console.ReadLine();
+            //Fibonacci.Arr();
+
+            JaggedArr.CreateInnerArr();
+
+            // multi dimensional arr
+            //SumDiagonal(Arr);
+
+            //SumAntiDiagonal(Arr);
+
+
+            Console.ReadLine();
         }
     }
 }
