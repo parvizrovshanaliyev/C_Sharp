@@ -359,36 +359,122 @@ namespace Operators
              * 
              */
 
-            Console.Write("1. Exam score :");
-            decimal score1 = Convert.ToDecimal(Console.ReadLine());
+            //Console.Write("1. Exam score :");
+            //decimal score1 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.Write("2. Exam score :");
-            decimal score2 = Convert.ToDecimal(Console.ReadLine());
+            //Console.Write("2. Exam score :");
+            //decimal score2 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.Write("3. Exam score :");
-            decimal score3 = Convert.ToDecimal(Console.ReadLine());
+            //Console.Write("3. Exam score :");
+            //decimal score3 = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine("Your values have been received, the calculation is being done");
+            //Console.WriteLine("Your values have been received, the calculation is being done");
 
-            decimal average = (score1 + score2 + score3) / 3;
+            //decimal average = (score1 + score2 + score3) / 3;
 
-            bool controlResult = average >= 45;
+            //bool controlResult = average >= 45;
 
-            string result = controlResult ? "Yes" : "No";
+            //string result = controlResult ? "Yes" : "No";
 
-            Console.Clear();
+            //Console.Clear();
 
-            Console.WriteLine("------------------------");
-            Console.WriteLine("1. Exam score : {0}",score1);
+            //Console.WriteLine("------------------------");
+            //Console.WriteLine("1. Exam score : {0}",score1);
 
-            Console.WriteLine("2. Exam score : {0}",score2);
+            //Console.WriteLine("2. Exam score : {0}",score2);
 
-            Console.WriteLine("3. Exam score : {0}",score3);
-            Console.WriteLine("------------------------");
+            //Console.WriteLine("3. Exam score : {0}",score3);
+            //Console.WriteLine("------------------------");
 
-            Console.WriteLine("Is the average value greater than 45 or equal to ?");
-            
-            Console.Write(" '{0}' : '{1}' ",result,average);
+            //Console.WriteLine("Is the average value greater than 45 or equal to ?");
+
+            //Console.Write(" '{0}' : '{1}' ",result,average);
+            #endregion
+
+            #region 2
+            /*
+             * username ve password deye deyisenler teyin edin.
+             * Istifaden  username ve Password isteyin.
+             *
+             * Daxil edilen username ve passwordun teyin edilen
+             * deyisenlerin deyerine beraber olub olmamasini yoxlayin,
+             *
+             * Netice olaraq login emeliyyatinin ugurlu ve ya
+             *
+             *  daxil edilen
+             *  username ve ya sifrenin dogru olmadigi mesajini verin.
+             *
+             *
+             * Username : admin
+             * Password : 6gH123
+             *
+             * Your username :
+             * Your Password :
+             */
+
+            //string userName = "Admin";
+            //string password = "6gH123";
+
+            //Console.Write("Username : ");
+            //string clientUserName = Console.ReadLine();
+
+            //Console.Write("Password : ");
+            //string clientPassword = Console.ReadLine();
+
+            ////bool checkUsername = clientUserName == userName;
+            ////bool checkUsername1 = clientUserName != userName;
+            ////bool checkPassword = clientPassword == password;
+            ////bool checkPassword1 = clientPassword != password;
+
+            //string result = (clientUserName == userName &&
+            //                 clientPassword == password)
+            //    ? "Login successful"
+            //    : "Failed login";
+
+            //Console.Clear();
+
+            //Console.WriteLine("------------------------");
+            //Console.Write("{0}",result);
+            //Console.WriteLine("------------------------");
+
+            #endregion
+
+            #region exam
+
+            /*
+             * 1. int num1=10;
+             *    int num2=20;
+             *    bool result = num1 > num2;
+             *
+             *  asagidakilardan hansi uygun gelir ?
+             *
+             *  num1 deyeri num2 deyerinden kicikdir ve bool tipinde olan result
+             *  deyiseni bu iki deyerin muqayisesinden false deyerini alir.
+             *
+             * num1 deyeri num2 deyerine beraberdir ve bool tipinde olan result
+             *  deyiseni true-dur.
+             *
+             ********************
+             * 2. int num1 = 100;
+             *
+             *    int num2 = 2;
+             *    
+             *    int result = (num1 + 10 ) / num2;
+             *    
+             *    Console.WriteLine(result);
+             *
+             * Result : 33;
+             * Result : 55;
+             * Result : 66;
+             * ******************
+             * 3. Boyuk beraberdir  ve beraber deyildir operatorlari hansilardir.
+             *
+             * =! , ==
+             * == , <=
+             * >= , <=
+             * >= , !=
+             */
+
             #endregion
 
             #endregion
