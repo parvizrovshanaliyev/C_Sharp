@@ -69,7 +69,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTypes", "DataTypes\Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operators", "Operators\Operators.csproj", "{DBE5A9E2-5D68-4502-B5E7-95FA59D9A447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionMaking", "DecisionMaking\DecisionMaking.csproj", "{23150AC0-46C5-4C4E-BE75-393E9609C1D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecisionMaking", "DecisionMaking\DecisionMaking.csproj", "{23150AC0-46C5-4C4E-BE75-393E9609C1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "Loops\Loops.csproj", "{877C7D11-A757-4DD2-BC30-53EDB02927C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,10 @@ Global
 		{23150AC0-46C5-4C4E-BE75-393E9609C1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23150AC0-46C5-4C4E-BE75-393E9609C1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23150AC0-46C5-4C4E-BE75-393E9609C1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877C7D11-A757-4DD2-BC30-53EDB02927C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877C7D11-A757-4DD2-BC30-53EDB02927C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877C7D11-A757-4DD2-BC30-53EDB02927C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877C7D11-A757-4DD2-BC30-53EDB02927C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +182,7 @@ Global
 		{3A700F65-CF81-40FB-871D-C919DC59FE74} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{DBE5A9E2-5D68-4502-B5E7-95FA59D9A447} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{23150AC0-46C5-4C4E-BE75-393E9609C1D3} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
+		{877C7D11-A757-4DD2-BC30-53EDB02927C2} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}

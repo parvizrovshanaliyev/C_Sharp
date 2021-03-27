@@ -228,7 +228,8 @@ namespace DecisionMaking
             if (checkTotal)
             {
                 Console.WriteLine("2.mehsul endrim 20 %");
-                total = productPrice1-(productPrice1 * 20 / 100) + productPrice;
+                //total = productPrice1-(productPrice1 * 20 / 100) + productPrice;
+                total = (productPrice1 * 80 / 100) + productPrice;
             }
             else
             {
