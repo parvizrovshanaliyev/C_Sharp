@@ -71,61 +71,57 @@ namespace DecisionMaking
              *
              * qeyd: bolen 0 ola bilmez;
              */
-            Console.WriteLine("----MENU----");
-            Console.WriteLine("* 1- Toplama");
-            Console.WriteLine("* 2- Cixma");
-            Console.WriteLine("* 3- Vurma");
-            Console.WriteLine("* 4- Bolme");
-            Console.WriteLine("----MENU----");
-            Console.Write("emeliyyati nomresini daxil edin: ");
-            int operation = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("----MENU----");
+            //Console.WriteLine("* 1- Toplama");
+            //Console.WriteLine("* 2- Cixma");
+            //Console.WriteLine("* 3- Vurma");
+            //Console.WriteLine("* 4- Bolme");
+            //Console.WriteLine("----MENU----");
+            //Console.Write("emeliyyati nomresini daxil edin: ");
+            //int operation = Convert.ToInt32(Console.ReadLine());
 
-            if (operation ==1 ||
-                operation == 2 ||
-                operation == 3 ||
-                operation == 4)
-            {
-                Console.Write("1. Daxil Edin: ");
-                double number1 = Convert.ToDouble(Console.ReadLine());
-                Console.Write("2. Daxil Edin: ");
-                double number2 = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("-------------");
-                if (operation == 1)
-                {
-                    Console.Write("Netice: {0}",(number1 + number2));
-                }
-                else if (operation == 2)
-                {
-                    Console.Write("Netice: {0}", (number1 - number2));
+            //if (operation ==1 ||
+            //    operation == 2 ||
+            //    operation == 3 ||
+            //    operation == 4)
+            //{
+            //    Console.Write("1. Daxil Edin: ");
+            //    double number1 = Convert.ToDouble(Console.ReadLine());
+            //    Console.Write("2. Daxil Edin: ");
+            //    double number2 = Convert.ToDouble(Console.ReadLine());
+            //    Console.WriteLine("-------------");
+            //    if (operation == 1)
+            //    {
+            //        Console.Write("Netice: {0}",(number1 + number2));
+            //    }
+            //    else if (operation == 2)
+            //    {
+            //        Console.Write("Netice: {0}", (number1 - number2));
 
-                }
-                else if (operation == 3)
-                {
-                    Console.Write("Netice: {0}", (number1 * number2));
+            //    }
+            //    else if (operation == 3)
+            //    {
+            //        Console.Write("Netice: {0}", (number1 * number2));
 
-                }
-                else if (operation == 4)
-                {
-                    if (number2==0)
-                    {
-                        Console.WriteLine("qeyd: bolen 0 ola bilmez;");
-                    }
-                    else
-                    {
+            //    }
+            //    else if (operation == 4)
+            //    {
+            //        if (number2==0)
+            //        {
+            //            Console.WriteLine("qeyd: bolen 0 ola bilmez;");
+            //        }
+            //        else
+            //        {
 
-                        Console.Write("Netice: {0}", (number1 / number2));
-                    }
+            //            Console.Write("Netice: {0}", (number1 / number2));
+            //        }
 
-                }
-                else
-                {
-
-                }
-            }
-            else
-            {
-                Console.WriteLine("daxil edilen emeliyyat duz deyil");
-            }
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("daxil edilen emeliyyat duz deyil");
+            //}
 
             #endregion
 
@@ -172,9 +168,14 @@ namespace DecisionMaking
             #endregion
 
             #region task
+            #region 1
             /*
              * Bal Ortalamasinin Hesablanmasi
              *
+             * istifadeciden ad ve soyadini ,
+             *  4 eded imtahan neticesini daxil etmesini isteyirik.
+             *
+             * netice asagidaki kimi olmalidir
              *
              * Ad ve Soyad : Parviz Aliyev
              *
@@ -183,12 +184,63 @@ namespace DecisionMaking
              * Netice : 30
              * Netice : 20
              *
-             *
+             * Ortalama : 35
              */
             #endregion
 
+            #region 2 20 % endirim
+            /*
+             * Consoledan daxil edilen 2 eded mehsulun qiymetleri cemi
+             *
+             * 200 azn den coxdursa , ikinci mehsulun qiymetini 20 % endirim ile
+             * hesablayib umumi meblegi gosterin. Netice asagidaki kimi olacaq.
+             *
+             *
+             *
+             *1. Mehsul : 50 azn
+             *2. Mehsul : 240 azn
+             *
+             * --------Yekun----------
+             *
+             * 2. Mehsul Endirim : 20%
+             *
+             * Umumi : 242 azn
+             * _______________________
+             *
+             */
+
+            Console.Write("1.mehsulun qiymeti: ");
+            decimal productPrice = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("2.mehsulun qiymeti: ");
+            decimal productPrice1 = Convert.ToDecimal(Console.ReadLine());
+
+            bool checkTotal = (productPrice + productPrice1) > 200;
+
+            decimal total = 0;
+
+           
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("1.mehsulun qiymeti:{0}",productPrice);
+            Console.WriteLine("2.mehsulun qiymeti:{0}",productPrice1);
+            Console.WriteLine("-----------Yekun-------------");
+
+            if (checkTotal)
+            {
+                Console.WriteLine("2.mehsul endrim 20 %");
+                total = productPrice1-(productPrice1 * 20 / 100) + productPrice;
+            }
+            else
+            {
+                total = productPrice + productPrice1;
+            }
+            Console.WriteLine("umumi : {0}",total);
+
             #endregion
-            
+            #endregion
+
+            #endregion
+
             #endregion
 
             #region switchCase
