@@ -15,8 +15,10 @@ namespace CSharpPatternMatching_7_0
              *
              * Pattern Matching dedikde  qeliblesmis kod bloklari
              *
-             * basa duse bilerik. 
+             * basa duse bilerik.
+             *
              */
+
             // c# 7.0 ile gelen patternler
             #region type pattern
             /*
@@ -140,7 +142,6 @@ namespace CSharpPatternMatching_7_0
              * daxilinde  type pattern ve constant patternler var
              */
             #endregion
-
 
             // c# 9.0 ile gelen patternler
             // Pattern Matching Enhancements
