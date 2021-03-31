@@ -442,6 +442,24 @@ namespace DecisionMaking
 
             #endregion
 
+
+            #region task
+
+            #region mini login
+            /*
+             * Daxil edilen istifadeci adi ve sifresini yoxlayin.
+             *
+             * netice olaraq "girisin ugurlu olmasi" ve ya "daxil edilen istifadeci adi ve sifre dogru deyil"
+             * mesajini verin.
+             *
+             * qeyd: eyni taski, if, ternary operator ve switch ile yazin
+             */
+            
+
+            #endregion
+
+            #endregion
+
             Console.ReadLine();
         }
     }

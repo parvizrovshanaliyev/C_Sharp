@@ -22,6 +22,8 @@ namespace Loops
              */
             #region for
 
+            #region example
+
             //Console.WriteLine("0 i++");
             //for (int i = 0; i < 10; i++)
             //{
@@ -39,6 +41,8 @@ namespace Loops
             //{
             //    Console.WriteLine(i);
             //}
+
+            #endregion
 
             #region 1-10 qeder ededleri sirala
 
@@ -192,14 +196,14 @@ namespace Loops
              *
              *
              */
-            while (false)
-            {
-                Console.WriteLine("while");
-            }
-            do
-            {
-                Console.WriteLine("do while");
-            } while (false);
+            //while (false)
+            //{
+            //    Console.WriteLine("while");
+            //}
+            //do
+            //{
+            //    Console.WriteLine("do while");
+            //} while (false);
 
             #endregion
 
@@ -262,7 +266,23 @@ namespace Loops
 
             //    }
             //}
+            /*
+             * vurma cedveli
+             */
 
+            //for (int i = 1; i <= 9; i++)
+            //{
+            //    for (int j = 1; j <= 9; j++)
+            //    {
+            //        int result = i * j;
+
+            //        Console.Write("{0} * {1} = {2}\t",i,j,result);
+
+            //    }
+
+            //    Console.WriteLine();
+            //}
+            //Console.Clear();
             #endregion
 
             #region foreach loopdurmu ?
