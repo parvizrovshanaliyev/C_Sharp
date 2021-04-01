@@ -175,9 +175,19 @@ using System.Threading.Channels;
 
 
 #endregion
+
+#region createInstance
+
+//int[] values = new int[3];
+
+//Array valuesArray=Array.CreateInstance(typeof(int),3);
+
 #endregion
 
-#region speaciality / ozellikler
+#endregion
+
+#region properties / ozellikler
+
 #region IsReadOnly
 
 
@@ -198,10 +208,41 @@ using System.Threading.Channels;
 
 #region Rank
 
-
+/*
+ * arrayin derecesini nece multidimensional
+ *
+ */
 
 #endregion
 
+#endregion
+#endregion
+
+#region c# 8.0 ranges  and indices // System.Ranges - System.Index opearator .. ^
+/*
+ * index tipi arrayler ve collectionlardaki elementin indexini saxlamaqdadir.
+ * ^ operator tersine istifade edilerse normal arraylerde
+ * 0-dan baslayib n-1 bire gedirdise burada 1-den baslayib n- gedir
+ */
+
+//string[] names = {"a", "b", "c"};
+//Index index = 2; // "c"
+
+//Index index2 = ^2; // "b"
+
+#region range System.Range
+/*
+ * deyer araligi vererek istifade edilir.
+ */
+//int[] numbers = new[]{ 1, 2, 3,4,5,6,7,8,9 };
+
+//Range range = 3..7; // 3 indexdir ; 7 ise siradir
+//Range range1 = ^3..7; // 3 indexdir ; 7 ise siradir
+
+
+//Range range = ..; // kopyalama ucun bele istifade edile biler
+
+//var numbers2 = numbers[range];
 #endregion
 #endregion
 
@@ -299,6 +340,31 @@ using System.Threading.Channels;
 //}
 #endregion
 
+#region Array sort in asscending order
+
+//int[] intArray = new int[] { 2, 9, 4, 3, 5, 1, 7 };
+//int temp = 0;
+
+//for (int i = 0; i <= intArray.Length - 1; i++)
+//{
+//    for (int j = i + 1; j < intArray.Length; j++)
+//    {
+//        if (intArray[i] > intArray[j])
+//        {
+//            temp = intArray[i];
+//            intArray[i] = intArray[j];
+//            intArray[j] = temp;
+//        }
+//    }
+//}
+//Console.WriteLine("Array sort in asscending order");
+//foreach (var item in intArray)
+//{
+//    Console.WriteLine(item);
+//}
+//Console.ReadLine();
+
+#endregion
 
 #endregion
 #endregion
