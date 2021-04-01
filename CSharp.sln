@@ -75,9 +75,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loops", "Loops\Loops.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpPatternMatching_7_0", "CSharpPatternMatching_7_0\CSharpPatternMatching_7_0.csproj", "{A25E7051-B06D-4918-9FC6-A3665DB0337B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keywords_and_manevratik_komutlar", "Keywords_and_manevratik_komutlar\Keywords_and_manevratik_komutlar.csproj", "{391E3F98-5081-42D5-B481-2DA4539C2C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keywords_and_manevratik_komutlar", "Keywords_and_manevratik_komutlar\Keywords_and_manevratik_komutlar.csproj", "{391E3F98-5081-42D5-B481-2DA4539C2C16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{05ABD240-58F7-4606-81D6-2B2E4264318A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{05ABD240-58F7-4606-81D6-2B2E4264318A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
