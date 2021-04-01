@@ -77,6 +77,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpPatternMatching_7_0",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keywords_and_manevratik_komutlar", "Keywords_and_manevratik_komutlar\Keywords_and_manevratik_komutlar.csproj", "{391E3F98-5081-42D5-B481-2DA4539C2C16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{05ABD240-58F7-4606-81D6-2B2E4264318A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,10 @@ Global
 		{391E3F98-5081-42D5-B481-2DA4539C2C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{391E3F98-5081-42D5-B481-2DA4539C2C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{391E3F98-5081-42D5-B481-2DA4539C2C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -197,6 +203,7 @@ Global
 		{877C7D11-A757-4DD2-BC30-53EDB02927C2} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{A25E7051-B06D-4918-9FC6-A3665DB0337B} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{391E3F98-5081-42D5-B481-2DA4539C2C16} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
+		{05ABD240-58F7-4606-81D6-2B2E4264318A} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
