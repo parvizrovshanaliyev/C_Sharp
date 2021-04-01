@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Globalization;
 using System.Threading.Channels;
 
 #region arrays
 /*
  * bir deyisen altinda birden cox eyni tipli deyeri saxlamagimiza
- *
  * imkan verir.
  *
  * Demeli arrayler prosedual programlasdirmanin temel anlayislarindan
@@ -79,6 +79,132 @@ using System.Threading.Channels;
 
 #endregion
 
+#region array class
+/*
+ * Array class nedir ?
+ *
+ * class movzusunu OOP-de etrafli baxacayiq.
+ *
+ * Array olaraq yaradilan deyisenler eslinde Array classindan gelmektedir.(inheritance)
+ * Arraylerde array clasindan gelen metodlar ve ozellikler movcuddur.
+ *
+ */
+
+// normal qaydada array teyin ederken indexer operatorundan istifade etmeliyik
+// class olaraq teyin edilerse indexer ehtiyyac yoxdur.
+//int[] numbers = new int[3]; // algoritmlerde / operativ istifade edilir
+//Array numbers2 = new int[3];  //
+
+#region array classinin elementlerine deyer verilmesi
+
+//Array numbers = new int[]{1,2,3};
+//Array numbers = new int[3]{1,2,3};
+//Array numbers = new[] {1,2,3};
+
+//2.
+
+//Array numbers = new int[3];
+
+//numbers.SetValue(10,0);
+
+// deyerin oxunmasi
+
+//object val = numbers.GetValue(1);
+#endregion
+
+#region methods
+
+#region clear
+/*
+ * array-in icerisindeki elementlerin deyerini arrayin tipine uygun default deyer
+ * menimsedir.
+ * yeni silmir default deyer verir.
+ */
+//Array names = new[] {"Resad", "Ferid", "Avaz"};
+//for (int i = 0; i < names.Length; i++)
+//{
+//    Console.WriteLine(names.GetValue(i));
+//}
+//Array.Clear(names, 0, names.Length);
+//Console.WriteLine("+++++++");
+//for (int i = 0; i < names.Length; i++)
+//{
+//    Console.WriteLine(names.GetValue(i));
+//}
+#endregion
+
+#region copy
+/*
+ * Bu metodla bir arrayin deyerlerini basqa bir arraye kopyalayiriq.
+ */
+//Array names = new[] { "Resad", "Ferid", "Avaz" };
+
+//string[] names2 = new string[names.Length];
+
+//Array.Copy(names,names2,2);
+
+#endregion
+
+#region indexOf
+/*
+ * Bir array-de element olub olmadigini yoxlayir.
+ * Axtarilan deyerin index nomresini qaytarir. yoxdursa -1 qaytarir
+ */
+//Array names = new[] { "Resad", "Ferid", "Avaz" };
+
+//var index=Array.IndexOf(names, "Resad");
+
+//if (index != -1)
+//{
+
+//}
+#endregion
+
+#region reverse
+/*
+ * array icerisinde elementleri tersine siralayir
+ */
+//Array names = new[] { "Resad", "Ferid", "Avaz" };
+//Array.Reverse(names);
+#endregion
+
+#region sort
+/*
+ * siralama isini gorur
+ */
+
+
+#endregion
+#endregion
+
+#region speaciality / ozellikler
+#region IsReadOnly
+
+
+
+#endregion
+
+#region IsFixedSize
+
+
+
+#endregion
+
+#region Length
+
+
+
+#endregion
+
+#region Rank
+
+
+
+#endregion
+
+#endregion
+#endregion
+
 #region example
 
 #region 1.
@@ -150,4 +276,29 @@ using System.Threading.Channels;
 
 #endregion
 
+#region task
+
+#region Reverse an array without using Array.Reverse()
+//int[] arr = { 1, 3, 4, 9, 8 };
+
+//foreach (var i in arr)
+//{
+//    Console.WriteLine(i);
+//}
+
+////for (int i = 0; i < arr.Length / 2; i++)
+////{
+////    int tmp = arr[i];
+////    arr[i] = arr[arr.Length - i - 1];
+////    arr[arr.Length - i - 1] = tmp;
+////}
+
+//foreach (var i in arr)
+//{
+//    Console.WriteLine(i);
+//}
+#endregion
+
+
+#endregion
 #endregion

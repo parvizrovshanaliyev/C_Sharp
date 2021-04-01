@@ -78,8 +78,7 @@ namespace DataTypes
             //Console.WriteLine(city);
 
             #endregion
-
-
+            
             #region type conversion
 
             // implicit - bilincli
