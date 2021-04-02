@@ -1,6 +1,5 @@
-﻿using System;
-using System.Globalization;
-using System.Threading.Channels;
+﻿
+
 
 #region arrays
 /*
@@ -371,6 +370,72 @@ using System.Threading.Channels;
 
 #region multidimensional
 
+/*
+ *  Multidimensional array daha cox oyun programlasdirmasinda,
+ *  statistika ile bagli islerde istifade edilmektedir.
+ *
+ * Bu arraylerde indexer icerisindeki vergul sayi + 1 ile arrayin
+ * nece dereceli oldugunu basa duse bilerik [,,,] 4 dereceli
+ */
 
+//int[,] numbers = new int[3, 5];
+//int[,] numbers =
+//{
+//    {1,2,3},
+//    {4,5,6,7,8 }
+//};
+
+
+//int[,,,] numbers =
+//{
+//    {
+//        {
+//            {0,1,2 }
+//        }
+//    }
+//};
+#region deyer verilmesi
+
+//int[,] numbers = new int[3, 4];
+
+//numbers[0, 0] = 10;
+#endregion
+
+#region loop
+
+
+//int[,,] numbers = new int[2,2 ,4];
+//numbers[0, 0, 0] = 1;
+//numbers[0, 0, 1] = 2;
+//numbers[0, 0, 2] = 3;
+//numbers[0, 0, 3] = 4;
+
+//int[,,] arr3d3 = new int[2, 2, 3]{
+//    { { 1, 2, 3}, {4, 5, 6} },
+//    { { 7, 8, 9}, {10, 11, 12} }
+//};
+//for (int i = 0; i < arr3d3.GetLength(0); i++)
+//{
+//    for (int j = 0; j < arr3d3.GetLength(1); j++)
+//    {
+//        for (int k = 0; k < arr3d3.GetLength(2); k++)
+//        {
+//            Console.Write("{0}\t", arr3d3[i,j,k]);
+//        }
+
+//        Console.WriteLine("");
+//    }
+//}
+#endregion
+#endregion
+
+#region C# Jagged Arrays: An Array of Array
+
+/*
+ * Array icerisinde array....
+ * Multidimensional arraylerden ferqi sutun sayinin sabit olmamasidir.
+ */
+//int[][] jArray1 = new int[2][]; // can include two single-dimensional arrays 
+//int[][,] jArray2 = new int[3][,]; // can include three two-dimensional arrays 
 
 #endregion
