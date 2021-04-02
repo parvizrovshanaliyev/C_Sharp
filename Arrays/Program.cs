@@ -1,6 +1,4 @@
 ﻿
-
-
 #region arrays
 /*
  * bir deyisen altinda birden cox eyni tipli deyeri saxlamagimiza

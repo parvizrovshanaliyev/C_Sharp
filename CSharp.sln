@@ -79,6 +79,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keywords_and_manevratik_kom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{05ABD240-58F7-4606-81D6-2B2E4264318A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "About_String", "About_String\About_String.csproj", "{F2DE8DAF-5A89-4540-B7C4-DD02186FB759}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05ABD240-58F7-4606-81D6-2B2E4264318A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DE8DAF-5A89-4540-B7C4-DD02186FB759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DE8DAF-5A89-4540-B7C4-DD02186FB759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DE8DAF-5A89-4540-B7C4-DD02186FB759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DE8DAF-5A89-4540-B7C4-DD02186FB759}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +210,7 @@ Global
 		{A25E7051-B06D-4918-9FC6-A3665DB0337B} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{391E3F98-5081-42D5-B481-2DA4539C2C16} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{05ABD240-58F7-4606-81D6-2B2E4264318A} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
+		{F2DE8DAF-5A89-4540-B7C4-DD02186FB759} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
