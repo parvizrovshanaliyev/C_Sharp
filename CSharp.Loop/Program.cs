@@ -10,13 +10,13 @@ namespace CSharp.Loop
     {
         static void Main(string[] args)
         {
-            //AscWriteStar();
+            AscWriteStar();
             //DescWriteStar();
-            foreach (var dateTime in GetDateRange(new DateTime(), new DateTime(2010, 6, 15)))
-            {
-                var time = dateTime;
-                Console.WriteLine(time);
-            }
+            //foreach (var dateTime in GetDateRange(new DateTime(), new DateTime(2010, 6, 15)))
+            //{
+            //    var time = dateTime;
+            //    Console.WriteLine(time);
+            //}
 
             Console.ReadKey();
         }

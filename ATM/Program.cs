@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ATM
 {
@@ -20,6 +16,7 @@ namespace ATM
 
                 money = Convert.ToInt32(Console.ReadLine());
 
+                
                 Console.WriteLine("==========================");
 
                 for (i = 0; i <= banknote.Length - 1; i++)
