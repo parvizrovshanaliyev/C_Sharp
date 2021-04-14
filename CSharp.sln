@@ -89,6 +89,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasks", "Tasks\Tasks.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Span_ReadOnlySpan_extc", "Span_ReadOnlySpan_extc\Span_ReadOnlySpan_extc.csproj", "{AC06E74E-22C0-427A-A3B2-2689EA22F210}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions", "RegularExpresions\RegularExpressions.csproj", "{B82A32DE-F112-4BB2-94A2-B675906EAC75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,6 +205,10 @@ Global
 		{AC06E74E-22C0-427A-A3B2-2689EA22F210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC06E74E-22C0-427A-A3B2-2689EA22F210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC06E74E-22C0-427A-A3B2-2689EA22F210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82A32DE-F112-4BB2-94A2-B675906EAC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82A32DE-F112-4BB2-94A2-B675906EAC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82A32DE-F112-4BB2-94A2-B675906EAC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82A32DE-F112-4BB2-94A2-B675906EAC75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,6 +245,7 @@ Global
 		{EFFB0EF2-98AB-4244-A1D8-16CCF3954B0D} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{6BAD940A-3A52-471D-8898-E4980B8946AC} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 		{AC06E74E-22C0-427A-A3B2-2689EA22F210} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
+		{B82A32DE-F112-4BB2-94A2-B675906EAC75} = {F27EFFAF-59E5-4FBC-BDDE-E5526F692515}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
