@@ -49,8 +49,37 @@ namespace Methods_Intro
             //} while (Console.ReadLine()?.ToUpper() != "X");
             #endregion
 
-            #region ref out
+            #region ref, out , in
+            /*
+         * Burada normal qaydada refden istifade edilmeseydi deyer kopyalanacaqdi ancaq
+         * ref keywordu vasitesi ile deyer kopyalanmir  heapde yaradilir ve iki deyisende ona reference/muraciet
+         * edir.
+         *
+         * https://www.pluralsight.com/guides/csharp-in-out-ref-parameters
+         */
 
+            /*
+             * ref ve in baslangic deyeri almalidir,
+             * out baslangic deyeri alamadan isleyir
+             *
+             * ref-istifadesi zamani evvelceden teyin edilen deyisenin parametr olaraq
+             * method-a oturuldukden sonra method vasitesile yeni deyer alacagi
+             * bildirilir (evvelceden deyeri oldugu ucun method-da yeni bir deyer
+             *     alamaya biler).
+             *
+             * c# 7.2 in-istifadesi zamani evvelceden teyin edilen deyisenin parametr olaraq
+             * method-a oturuldukden sonra method-da deyerinin deyismeyeceyi
+             * bildirilir. Reference type-la isleyirikse yeni instance ala bilmerik.
+             *
+             * out-istifadesi method-a oturulen parametrin method icerisinde deyer
+             * alacagini ve methoddan kenardada deyisen olaraq istifade edile bileceyini
+             * bildirir(evvelceden deyer alma kimi mecburiyyeti olmadigindan method icerisinde mecbur
+             *     deyer almalidir).
+             *
+             * Qeyd : Bu keyword-ler sadece sinxron isleyen metodlarda istifade edile biler,
+             * async asenxron methodlarda istifade edilmir. Bu movzularla irelide tanis olacagiq.
+             * hemcinin yield return, yield break iterasya isleri zamani da istifa edile bilmir.
+             */
             double number1 = 0;
 
             AssignValue(ref number1);
@@ -121,7 +150,7 @@ namespace Methods_Intro
         #region geriye deyer donen, parametr alan 
         public int Method3Sum(int a, int b)
         {
-            int sum =a+b;
+            int sum = a + b;
             return sum;
         }
         #endregion
@@ -163,7 +192,7 @@ namespace Methods_Intro
          *
          * params dan sonra yox parametrler ondan evvel teyin edilmelidir
          */
-        static void Sum2(int a,params int[] numbers)
+        static void Sum2(int a, params int[] numbers)
         {
             int sum = 0;
             for (int i = 0; i < numbers.Length; i++)
