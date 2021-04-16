@@ -1,11 +1,13 @@
 ﻿using System;
-
+//using static OOP.NestedTypeClass;
 namespace OOP
 {
     class Program
     {
         static void Main(string[] args)
         {
+            #region class
+
             #region field
             //MyClass myClass = new MyClass();
             //var myClassNumber = myClass.number;
@@ -16,6 +18,46 @@ namespace OOP
             //MyClassIndexer myClassIndexer = new MyClassIndexer();
 
             //myClassIndexer[0] = 5;
+
+            #endregion
+
+            #region nested type
+
+            //NestedTypeClass.InnerClass innerClass1 = new NestedTypeClass.InnerClass();
+            //InnerClass innerClass2 = new InnerClass();
+            #endregion
+
+            #region summary
+
+            //SummaryClass summary = new SummaryClass();
+
+            #endregion
+
+            #endregion
+
+            #region shallow copy deep copy
+            /*
+             * Shallow copy
+             */
+            //ShallowCopyClass shallowCopy1 = new ShallowCopyClass();
+            //ShallowCopyClass shallowCopy2 = shallowCopy1;
+            //ShallowCopyClass shallowCopy3 = new();
+
+
+            #endregion
+
+            #region encapsulation
+            //EncapsulationWithMethodClass encapsulationWithMethod = new();
+            //encapsulationWithMethod.XSet(5);
+            //Console.WriteLine(encapsulationWithMethod.XGet());
+            #endregion
+
+            #region Records
+            #region Init Only Properties
+
+            
+
+            #endregion
 
             #endregion
         }
@@ -255,6 +297,350 @@ namespace OOP
     //    }
     //}
     #endregion
+    #endregion
+
+    #region nested type
+    /*
+     * Class basqa bir class icerisindede teyin edile biler ancaq
+     * class member sayilmir.
+     * Class memeber olmadigindan dolayi InnerClass-a icerisinde oldugu
+     * class-in instance-ni alaraq memberlerde oldugu kimi cata bilmerik.
+     */
+    //public class NestedTypeClass
+    //{
+    //    public class InnerClass
+    //    {
+
+
+    //    }
+    //}
+
+    #endregion
+
+    #region summary 
+    /*
+     * Classlarimiza ve onun memberlerine description elave ede bilerik.
+     * hansiki hazir istifade etdiyimiz class-larda bu descriptionlar movcuddur.
+     */
+    /// <summary>
+    /// Summary Class-i classlara nece aciqlama yaza bileceyimizi gostermek ucun yaradilib.
+    /// </summary>
+    //class SummaryClass
+    //{
+    //    /// <summary>
+    //    /// Ad saxlamaq ucun istifade edilecek.
+    //    /// </summary>
+    //    public string Name { get; set; }
+    //}
+
+    #endregion
+
+    #region this keyword
+
+    /*
+     * This keywordu class memberlerin icerisinde cagrila biler.
+     * Class-a aid obyekti temsil edir.
+     * Static Classlarda, memberlerde this istifade edilmez.
+     */
+    //class MyClass
+    //{
+    //    private int _a = 5;
+    //    public void Sum() // method
+    //    {
+    //        this.Sum();
+    //    }
+    //}
+
+    //static class MyClass2
+    //{
+    //    public static void Sum() // method
+    //    {
+    //        //this.Sum();
+    //    }
+    //}
+
+    /*
+     * class memeber olan field-le method parametri eyni adli olarsa,
+     * bu zaman this-le birbasa membere muraciet ede bilerik.
+     *
+     * this keywordunun qarsiligi o anki yaradilan obyekt-dir, bunun ucunde
+     * this-le onun memberlerine ozu kimi cata bilirik lakin this yazmasaqda
+     * cata bilerik eslinde bu  arxa planda this istifade edilir demekdir.
+     * Compiler seviyyesinde bu basa dusulur.
+     */
+
+    //class MyClass3
+    //{
+    //    private int a; // class member
+    //    private int _a2; // class member adlandirma zamani _ istifade edilir.
+
+    //    public void Sum(int a /*method parametri*/) // method
+    //    {
+    //        var i = this.a; // class memeber a
+
+    //        var i1 = a; // method-dan gelen a
+
+    //        var i2 = a; // class memeber
+    //    }
+    //}
+
+    /*
+     * This hemcinin bir constructor-dan diger bir constructor-u cagirmaq ucun de
+     * istifade edile biler.
+     */
+
+    #endregion
+
+    #endregion
+
+    #region object concept
+
+    /*
+     * What Is Object ?
+     *
+     * Obyektler complex deyerlerdir, obyetleri modellediyimiz class-lar ise
+     * Complex Type-lardir. Demeli biz ortaq xussiyyetleri dasiyan obyektleri bir model
+     * ile temsil edib yeni class-la sonra o model uzerinden obyektlerimizi yarada bilerik.
+     *
+     */
+
+    /*
+     * Instance syntax : new Type()
+     * C#-da yeni bir obyekt yarada bilmek ucun new operatoru istifade edilir.
+     */
+
+    //class MyClass
+    //{
+    //    public string Name { get; } = "Csharp";
+
+    //    private MyClass2 myClass2 = new();
+    //}
+
+    //class MyClass2
+    //{
+    //    public void Print()
+    //    {
+    //        MyClass myClass = new MyClass();
+
+    //        Console.WriteLine(myClass.Name);
+    //    }
+    //}
+
+    #endregion
+
+    #region Target-Typed New Expressions  C# 9.0
+
+    /*
+     * todo c#9.0 Target-Typed New Expressions
+     * Type x= new Type();
+     * Type x= new(); yeni gelen ozellik
+     *
+     * bu ozelliyi istifade ede bilmek ucun netcoreapp3.1 dirse veya daha asagi versiya
+     * onu  net5.0 deyismek lazimdir.
+     *
+     */
+
+
+    //class MyClass
+    //{
+
+
+    //    private MyClass2 myClass2 = new();
+    //}
+
+    //class MyClass2
+    //{
+
+    //}
+
+    #endregion
+
+    #region Reference - object reference relationship
+
+    /*
+     * What is Reference ?
+     *
+     * Evvelki derslerimizden reference ve value type anlayislarini bildiyimizi ferz
+     * ederek devam  etsek eger value type-lar stack-de reference type-lar heapde-de
+     * yerlesdirilir. Burada nezerde tutulan type-in deyeri heapde reference ise stackde yerlesirki
+     * reference anlayisida buradan ireli gelmektedir.
+     * Reference Type bir obyekte deyere reference etmeyede biler , bu zaman o null olacaq.
+     *
+     */
+
+    #endregion
+
+    #region Shallow Copy
+
+    /*
+     * Bir obyektin, deyerin referansinin kopyalanmasidir. Yeni elimizdeki deyer
+     * coxaldilmir sadece ona birde artiq referansla muraciet ede bilirik.
+     */
+
+    //public class ShallowCopyClass
+    //{
+    //    public string Name { get; } = "Shallow Copy";
+    //}
+    /*
+     * Deep copy
+     */
+    //class DeepCopy
+    //{
+    //    public DeepCopy Clone()
+    //    {
+    //       return this.MemberwiseClone() as DeepCopy;
+    //    }
+    //}
+
+    #endregion
+
+    #region Encapsulation
+
+    /*
+     * Ecapsulation obyektlerimizde ki field-lerimizi property-ler vasitesile
+     * istifade etmekdir ki bu istifade zamani colden bir basa fielde deyil sadece property-e
+     * cata bilirik. Kapsul icerisine alinan field kontrollu bir sekilde istifade edilir.
+     *
+     * Umumiyyetle ireli seviyye derslerde bir cox pattern yanasmalarinda bu anlayisi praktikada
+     * goreceksiniz.
+     *
+     * C# -da Encapsulation method ve property vasitesi ile edilir.
+     *
+     * Property gelene qeder encapsulation ucun sadece method-lardan istifade edilirdi.
+     */
+
+    // method vasitesi ile encapsulation
+    //class EncapsulationWithMethodClass
+    //{
+    //    private int x;
+
+    //    public int XGet()
+    //    {
+    //        return this.x;
+    //    }
+
+    //    public void XSet(int val)
+    //    {
+    //        this.x = val;
+    //    }
+    //}
+
+    // propfull tab
+    //class EncapsulationWithProp
+    //{
+    //    private int _a;
+
+    //    public int A
+    //    {
+    //        get { return _a; }
+    //        set { _a = value; }
+    //    }
+
+    //}
+
+    #endregion
+
+    #region Records
+
+    /*
+     * todo c# 9.0 Records , Init-Only Properties
+     *
+     * C# 9.0 ile her hansi bir obyektin property-lerine ilk deyerlerin
+     * menimsedilmesi ve sonradan o deyerlerin de deyisdirile bilmemesini temin
+     * eden Init-Only Properties xususiyyeti gelmisdir.
+     *
+     * Init-Only Properties ile sadece getonly readonly arasindaki ferq readOnly olan
+     *  property-ye obyekt ilk initialize, yaradildigi an ona deyer vere bilmirik.
+     * Object Initializer.
+     *
+     * Record nedir?
+     *
+     * Init-Only properties xususiyyeti ile biz class daxilindeki property-lerimizi deyismez
+     * sadece oxuna bilir veziyyete getiririk , lakin biz obyektin ozunude deyismez sabit olmasini
+     * temin etmek isteyirikse burada record istifade edilir.
+     *
+     * Record-a lightweight class-da deye bilerik.
+     *
+     * Class-da on planda olan her zaman obyekt, Record-da ise on planda olan onun daxilindeki
+     * deyerlerdir.
+     *
+     * Classin her instance-i ferqli deyerler olaraq qebul edilerken,
+     * Record daxilinde deyerler eyni oldugundan  instance-lar ferqli bele olsa eyni deyer olaraq
+     * qebul edilirler.
+     *
+     * Ferqi Class-in iki ferqli instance-ni bir biri ile Equals(instance1, instance2)
+     * qarsilasdirilmasi false , Record-da true olacaq.
+     *
+     *
+     */
+
+    #region Init-Only Properties
+
+    //class MyClassInitOnly
+    //{
+    //    public int MyPropertyReadOnly { get; } = 3; // readonly property
+    //    public int MyPropertyInitOnly { get; init; } // init keywordu vasitesile ile
+    //}
+
+    //class MyClass2
+    //{
+    //    public void Test()
+    //    {
+    //        MyClassInitOnly myClass = new MyClassInitOnly
+    //        {
+    //            /*
+    //             * Obyekt ilk yaradilan zaman ona deyer verdik ve
+    //             * onu readonly etdik
+    //             */
+    //            MyPropertyInitOnly = 3
+    //        };
+    //    }
+    //}
+
+    #endregion
+
+    #region Record
+    /*
+     * Init-Only Properties xususiyyeti record-da daha cox istifade edilir.
+     */
+    //record MyRecord
+    //{
+    //    public int MyProperty { get; set; }
+    //}
+
+    //class MyClass
+    //{
+    //    public int MyProperty { get; set; }
+    //}
+    //class MyClassTest
+    //{
+    //    public void Test()
+    //    {
+
+    //     MyRecord record1 = new MyRecord
+    //     {
+    //         MyProperty = 5
+    //     };
+
+    //     MyRecord record2 = new MyRecord
+    //     {
+    //         MyProperty = 5
+    //     };
+    //     Console.WriteLine(record1.Equals(record2)); // true
+    //     MyClass myClass1 = new MyClass
+    //     {
+    //         MyProperty = 5
+    //     };
+
+    //     MyClass myClass2 = new MyClass
+    //     {
+    //         MyProperty = 5
+    //     };
+
+    //     Console.WriteLine(myClass1.Equals(myClass2)); // false
+    //    }
+
+    //}
     #endregion
     #endregion
     #endregion
