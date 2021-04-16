@@ -116,97 +116,97 @@ namespace OOP
 
     //        };
     //}
-    class MyClassProps
-    {
-        //private int _number;
+    //class MyClassProps
+    //{
+    //    //private int _number;
 
-        //********** Full Property
-        //public/*access modifier*/ int /*geriye donus tipi*/ Number
-        //{
-        //    get
-        //    {
-        //        return _number;
-        //    }
-        //    //get => number;
-        //    set
-        //    {
-        //        _number = value; // buradaki value property hansi tipdedirse o tipe burunur.
-        //    }
-        //    //set => number = value;
-        //}
+    //    //********** Full Property
+    //    //public/*access modifier*/ int /*geriye donus tipi*/ Number
+    //    //{
+    //    //    get
+    //    //    {
+    //    //        return _number;
+    //    //    }
+    //    //    //get => number;
+    //    //    set
+    //    //    {
+    //    //        _number = value; // buradaki value property hansi tipdedirse o tipe burunur.
+    //    //    }
+    //    //    //set => number = value;
+    //    //}
 
-        //********** Prop
-        // field teyin etemeye ehtiyyac yoxdur
-        // compiler terefinden arxa terefde field teyin edilir.
-        // . readonly ola biler, writeonly ola bilmez
-        //public int MyProperty { get; set; }
+    //    //********** Prop
+    //    // field teyin etemeye ehtiyyac yoxdur
+    //    // compiler terefinden arxa terefde field teyin edilir.
+    //    // . readonly ola biler, writeonly ola bilmez
+    //    //public int MyProperty { get; set; }
 
-        /*
-         * ***********Auto Property Initializers (C# 6.0)
-         * bu ozellikle readonly prop-lara suretli sekilde deyer assign ede bilirik.
-         * Obyektimizin property-sine ilk deyerini vere bilirik
-         */
-        //public double Percent { get; set; } = 0.18;
-        //public byte Age { get; set; } = 40;
-        //public string Name { get; set; } = "Samir";
-        //public DateTime CreatedDate { get; set; }=DateTime.Now;
+    //    /*
+    //     * ***********Auto Property Initializers (C# 6.0)
+    //     * bu ozellikle readonly prop-lara suretli sekilde deyer assign ede bilirik.
+    //     * Obyektimizin property-sine ilk deyerini vere bilirik
+    //     */
+    //    //public double Percent { get; set; } = 0.18;
+    //    //public byte Age { get; set; } = 40;
+    //    //public string Name { get; set; } = "Samir";
+    //    //public DateTime CreatedDate { get; set; }=DateTime.Now;
 
 
-        /*
-         * ************ C# 7.2 Ref ReadOnly Returns
-         *
-         * Normal bir class-da onun her hansisa property-sine catmaq ucun
-         * her defe o class-dan yeni bir instance almagimiz lazim gelir,
-         * bu davranis ram-da her defe onun fieldlarinin ve propertylerinin de
-         * tekrar tekrar yaranmasina sebebiyyet vermektedir, lakin bizim elimizde
-         * onceden baslangic deyeri verilmis bir property varsa eyni deyerin
-         * RAM-da tekrar tekrar teyin edilmesindense birdefe teyin edilib diger instance
-         * -larin hemin  deyere reference etmesini isteyirik.
-         * Bu movzunun static anlayisini kecdikden sonra daha da aydin olacagini dusunurem.
-         * Umumi optimizasya isleri zamani istifade edilir, sadece qarsilasdiginiz zaman
-         * bunun da property oldugunu bilin.
-         */
-        // normal teyin edilme
-        //public string Name { get; set; } = "Parviz";
-        // Ref ReadOnly Returns
-        //private string _name = "Parviz";
-        //public ref readonly string Name => ref _name;
+    //    /*
+    //     * ************ C# 7.2 Ref ReadOnly Returns
+    //     *
+    //     * Normal bir class-da onun her hansisa property-sine catmaq ucun
+    //     * her defe o class-dan yeni bir instance almagimiz lazim gelir,
+    //     * bu davranis ram-da her defe onun fieldlarinin ve propertylerinin de
+    //     * tekrar tekrar yaranmasina sebebiyyet vermektedir, lakin bizim elimizde
+    //     * onceden baslangic deyeri verilmis bir property varsa eyni deyerin
+    //     * RAM-da tekrar tekrar teyin edilmesindense birdefe teyin edilib diger instance
+    //     * -larin hemin  deyere reference etmesini isteyirik.
+    //     * Bu movzunun static anlayisini kecdikden sonra daha da aydin olacagini dusunurem.
+    //     * Umumi optimizasya isleri zamani istifade edilir, sadece qarsilasdiginiz zaman
+    //     * bunun da property oldugunu bilin.
+    //     */
+    //    // normal teyin edilme
+    //    //public string Name { get; set; } = "Parviz";
+    //    // Ref ReadOnly Returns
+    //    //private string _name = "Parviz";
+    //    //public ref readonly string Name => ref _name;
 
-        /*
-         * Computed Properties
-         *
-         * propertu icerisinde her hansisa riyaz isler gorulur.
-         */
-        //private int _a = 5;
-        //private int _b = 8;
-        //public int Sum
-        //{
-        //    get
-        //    {
-        //        return _a +_b;
-        //    }
-        //}
+    //    /*
+    //     * Computed Properties
+    //     *
+    //     * propertu icerisinde her hansisa riyaz isler gorulur.
+    //     */
+    //    //private int _a = 5;
+    //    //private int _b = 8;
+    //    //public int Sum
+    //    //{
+    //    //    get
+    //    //    {
+    //    //        return _a +_b;
+    //    //    }
+    //    //}
 
-        /*
-         * Expression-Bodied Property
-         *
-         * property-de lambda expression istifade ede bilmeyimizi temin edir.
-         * sadece redonly-lerde istifade edilir.
-         * lambda expression dersi irelide kecilecek.
-         */
-        //private int _a = 5;
-        //private int _b = 8;
-        //public int Sum => _a + _b;
+    //    /*
+    //     * Expression-Bodied Property
+    //     *
+    //     * property-de lambda expression istifade ede bilmeyimizi temin edir.
+    //     * sadece redonly-lerde istifade edilir.
+    //     * lambda expression dersi irelide kecilecek.
+    //     */
+    //    //private int _a = 5;
+    //    //private int _b = 8;
+    //    //public int Sum => _a + _b;
 
-        /*
-         * Init-Only Properties-Init Accessor C# 9.0
-         *
-         * Obyektin ilk yaradildigi anda property-lerine deyer atamaqdadir.
-         * RunTime zamani deyeri deyisdirilmemeli olan obyetler ucun qabaqlayici
-         * tedbirdir deye bilerik.
-         * Object initializers dersinde etrafli kececeyik.
-         */
-    }
+    //    /*
+    //     * Init-Only Properties-Init Accessor C# 9.0
+    //     *
+    //     * Obyektin ilk yaradildigi anda property-lerine deyer atamaqdadir.
+    //     * RunTime zamani deyeri deyisdirilmemeli olan obyetler ucun qabaqlayici
+    //     * tedbirdir deye bilerik.
+    //     * Object initializers dersinde etrafli kececeyik.
+    //     */
+    //}
     #endregion
 
     #region method
@@ -217,7 +217,7 @@ namespace OOP
      */
     #endregion
 
-    #region Indexer
+    #region indexer
     /*
      * Obyekte indexer xususiyyeti qazandirir, evvelki derslerde oyrendiyimiz indexer operatoru vasitesile
      * obyektin instancedan sonra uygun indexe gore class daxilindeki array veya collectiondan get ve ya set isi gore bilirik.

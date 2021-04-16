@@ -58,6 +58,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intro", "Intro", "{A36E35BA-5BDD-4857-A9AC-6943EA774F69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Csharp_02", "Csharp_02", "{F27EFFAF-59E5-4FBC-BDDE-E5526F692515}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Asus\source\repos\PragmatechEducation\CSharp_02\README.md = C:\Users\Asus\source\repos\PragmatechEducation\CSharp_02\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intro", "Intro", "{98DC75E1-33CA-4771-BBF7-5A76D91D882B}"
 EndProject
@@ -91,7 +94,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Span_ReadOnlySpan_extc", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegularExpressions", "RegularExpresions\RegularExpressions.csproj", "{B82A32DE-F112-4BB2-94A2-B675906EAC75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{038A8550-B391-48D7-98B4-37AB2E1F2878}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "OOP\OOP.csproj", "{038A8550-B391-48D7-98B4-37AB2E1F2878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
