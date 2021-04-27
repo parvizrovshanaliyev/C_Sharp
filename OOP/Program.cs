@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Data;
+using OOP.CTOR;
+
 //using static OOP.NestedTypeClass;
 namespace OOP
 {
@@ -34,7 +37,6 @@ namespace OOP
             #endregion
 
             #endregion
-
             #region shallow copy deep copy
             /*
              * Shallow copy
@@ -45,19 +47,69 @@ namespace OOP
 
 
             #endregion
+            #region special class memeber
+            #region ctor
 
-            #region encapsulation
-            //EncapsulationWithMethodClass encapsulationWithMethod = new();
-            //encapsulationWithMethod.XSet(5);
-            //Console.WriteLine(encapsulationWithMethod.XGet());
+            //Credit credit = new Credit(4, 600, 0.3);
+
+            //credit.Calc();
+
             #endregion
 
+            #region destructor
+
+            //CreateMyClass();
+            //GC.Collect();
+            //Console.ReadLine();
+
+            //void CreateMyClass()
+            //{
+            //    MyClass myClass = new MyClass();
+            //}
+
+            #endregion
+
+            #region deconstruct method
+
+            //City city = new City
+            //{
+            //    Name = "Baku",
+            //    Population = 100_000_000
+            //};
+
+            //var (x, y) = city;
+            //Console.WriteLine(x,y);
+
+            #endregion
+
+            #endregion
+            
             #region Records
+
             #region Init Only Properties
 
-            
+
 
             #endregion
+
+            #endregion
+
+            #region examples
+
+            #region car
+            /*
+             *  masinin hazirda benzin deposunda neqeder benzin var ,  depoda olan benzinle nece km yol qet
+             * ede biler , yanacaq serfiyyati
+             *
+             * km / litr serfiyyat benzin  = 1 litr ile gedile bilecek yol 100 / 6 = 16,6
+             */
+            Car vaz07 = new Car(50, 8);
+
+            Console.WriteLine(vaz07.CurrentFuel);
+            Console.WriteLine(vaz07.MaxDistance);
+            Console.WriteLine();
+            #endregion
+
 
             #endregion
         }
@@ -81,7 +133,12 @@ namespace OOP
      *
      * Developer olaraq Stack bolge bizim ucun elcatan olsada HEAP ele deyil adindan da melum oldugu kimi reference etmek
      * mefhumu buradan gelmektedir,
+     *
+     * https://www.w3schools.com/cs/cs_oop.asp
      */
+
+
+    #endregion
 
     #region class
     /*
@@ -391,6 +448,199 @@ namespace OOP
 
     #endregion
 
+
+    #region speacial members
+
+    #region constructor method
+
+    /*
+     * Constructor (ctor) method bir obyekt yaradilarken ilk ise dusen method-dur.
+     *
+     * ctor adi class adi ile eyni olmalidir, bu tip xususu memeberler istisna olmaqla
+     * diger member-lerin adi class-la eyni ola bilmez,
+     * ctor-un geriye donus deyeri yoxdur .
+     *
+     * ctor-un access modifier-i pyblic olmalidir (private olan veziyyetlerede baxacagiq)
+     */
+
+    //class MyClassCtorExample // class
+    //{
+    //    private int _number1;
+    //    private int _number2;
+
+    //    public MyClassCtorExample(int number1, int number2) // ctor method
+    //    {
+    //        _number1 = number1;
+    //        _number2 = number2;
+    //    }
+    //}
+    /*
+     * Default Constructor
+     * Her Hansisa yaradilan class icerisinde siz ctor teyin etmesez bele default olaraq orada
+     * ctor var, bu compiler trfdn yerlesdirilir,
+     * bunu new instance () => operatordan yadda saxlaya bilersiz bu ctor-dur.
+     *
+     * Biz ozumuz ctor deyin ederken default ctor-u override etmis oluruq.
+     * new MyClass(); ()=>ctor
+     *
+     */
+
+    /*
+     * ctor-da access modifier private olan zaman basqa bir overload ctor yoxdursa ,
+     * hemin classdan yeni instance ala bilmersiz.
+     */
+
+    //class MyClassPrivateCtor
+    //{
+    //    MyClassPrivateCtor() // private ctor
+    //    {
+
+    //    }
+    //}
+    /*
+     * this keyword-u classa aid obyekti yemsil edir,
+     * hemcinin this-le class-in ctor-lari arasinda kecid ede bilerik.
+     */
+    //class MyClass
+    //{
+    //    public MyClass()
+    //    {
+    //        Console.WriteLine("1.ctor");
+    //    }
+
+    //    public MyClass(int a) : this() // : this() => yuxaridaki MyClass() ctor-nu ise salir/
+    //    {
+
+    //    }
+    //}
+
+    #endregion
+
+    #region destructor/finalizer
+
+    /*
+     * ctor-un eksine destructor  class-da en son auto ise dusen method-dur,
+     * bu da o demekdir ki artiq hemin classa aid obyektle isimiz bitib,
+     * ve hemin obyekt silinecek yaddasdan.
+     *
+     * obyektin silinmesi ucun bezi sertler lazimdir ki bunlardan biri obyektin hec bir
+     * reference yoxdursa  GC-terefinden silinecek,
+     * ve ya obyektin yaradildigi skopla bagli is bitibse ve o obyekt skopdan kenarda istifade
+     * edilmirse GC-terefinden silinecek.
+     *
+     * ctor-un eksine parametr qebul etmir,
+     * overload edile bilmez : yeni bir classda bir destructor method ola biler.
+     */
+
+
+    //class MyClass
+    //{
+    //    public MyClass()
+    //    {
+    //        Console.WriteLine("ctor");
+    //    }
+
+    //    ~MyClass() // destructor
+    //    {
+    //        // operations
+    //        Console.WriteLine("Destructor");
+    //    }
+    //}
+
+    #endregion
+
+    #region deconstruct method
+
+    /*
+     * Bir class icersinde Deconstruct deye adlandirdigimiz method
+     * Compiler terefinden xususi olaraq qeyde alinir ve class-a aid obyektden geriye
+     * tuple tipi qaytarir.
+     *
+     *  deconstruct method-un access modifier-i public olmalidir,
+     *  void method olmalidir.
+     *
+     */
+
+    //class City
+    //{
+    //    public string Name { get; set; }
+    //    public int Population { get; set; }
+
+    //    public void Deconstruct(out string x, out int y)
+    //    {
+    //        x = Name;
+    //        y = Population;
+    //    }
+    //}
+
+    #endregion
+
+    #region static constructor
+
+    /*
+     * Static ctor-u normal ctor-la qarshilasdirsaq asagidaki kimi bir sira ferqler var.
+     * Static ctor overload olmur, yeni parametr de qebul etmeyecek ve class icerisinde sadece
+     * 1 eded static ctor olacaq, access modifier olmur .
+     *
+     * Class-da ilk ise dusen method ctor-dur demisdik , lakin class-dan yeni bir obyekt yaradilanda (sadece ilk
+     * yaradilan instance-da) static ctor  ctor-da once ise dusur, sonra hemiseki kimi ctor once ise dusecek,
+     * yeni yaradilan ilk instance-dan sonra static ctor ise dusmeyecek.
+     *
+     * Static ctor sadece ilk instance-da deyil  hemcinin diger static memeberlerin istifadesi zamanida bir defe ise dusur,
+     * burdan bu neticeye gele bilerik ki static ctor hem ilk instance zaman , hem de static memeberin istifadesi zamani ise dusecek.
+     *
+     */
+    class MyClass
+    {
+        public MyClass() // ctor
+        {
+
+        }
+
+        static MyClass() // static ctor
+        {
+
+        }
+    }
+
+    #region Singleton Design Pattern
+    /*
+     * Design Pattern ler daha ust level derslerdir , sadece burada static ctor-un real praktikasi
+     * var deye gostermek isteyirem.
+     *
+     *
+     * Singleton : bir class-dan sadece tek bir obyektin yaradilmasini isteyirikse bu pattern istifade edilir.
+     */
+    //class DataBase
+    //{
+    //    DataBase()
+    //    {
+
+    //    }
+
+    //    static DataBase()
+    //    {
+    //        _dataBase = new DataBase();
+    //    }
+
+    //    private static DataBase _dataBase;
+
+    //    static DataBase GetInstance => _dataBase;
+    //}
+
+    #endregion
+    #endregion
+
+    #endregion
+
+    #endregion
+
+    #region Garbage Collector
+    // todo Garbage Collector etrafli arashdirin
+    /*
+     * 
+     */
+
     #endregion
 
     #region object concept
@@ -490,52 +740,6 @@ namespace OOP
     //    {
     //       return this.MemberwiseClone() as DeepCopy;
     //    }
-    //}
-
-    #endregion
-
-    #region Encapsulation
-
-    /*
-     * Ecapsulation obyektlerimizde ki field-lerimizi property-ler vasitesile
-     * istifade etmekdir ki bu istifade zamani colden bir basa fielde deyil sadece property-e
-     * cata bilirik. Kapsul icerisine alinan field kontrollu bir sekilde istifade edilir.
-     *
-     * Umumiyyetle ireli seviyye derslerde bir cox pattern yanasmalarinda bu anlayisi praktikada
-     * goreceksiniz.
-     *
-     * C# -da Encapsulation method ve property vasitesi ile edilir.
-     *
-     * Property gelene qeder encapsulation ucun sadece method-lardan istifade edilirdi.
-     */
-
-    // method vasitesi ile encapsulation
-    //class EncapsulationWithMethodClass
-    //{
-    //    private int x;
-
-    //    public int XGet()
-    //    {
-    //        return this.x;
-    //    }
-
-    //    public void XSet(int val)
-    //    {
-    //        this.x = val;
-    //    }
-    //}
-
-    // propfull tab
-    //class EncapsulationWithProp
-    //{
-    //    private int _a;
-
-    //    public int A
-    //    {
-    //        get { return _a; }
-    //        set { _a = value; }
-    //    }
-
     //}
 
     #endregion
@@ -641,6 +845,10 @@ namespace OOP
     //    }
 
     //}
+    #region with expression
+    /*
+     * https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/with-expression
+     */
     #endregion
     #endregion
     #endregion
