@@ -102,6 +102,122 @@ namespace Week6.Tasks
 
             #endregion
 
+            //StudentPrinter.Print();
+            Product product = new Product("X", 100, true, 5);
+            //{
+            //    Name = "X",
+            //    DoesTheProductHaveVAT = true,
+            //    Discount = 5,
+            //    Price = 100
+            //};
+            Console.WriteLine($"Discount:{product.Discount}");
+            Console.WriteLine($"Gain:{product.Gain}");
+            Console.WriteLine($"VAT:{product.VAT}");
+            Console.WriteLine($"Price:{product.Price}");
+        }
+    }
+
+    public class Product
+    {
+        public Product(string name, double price, bool haveVAT, double discount)
+        {
+            Name = name;
+            Discount = discount;
+            Price = price;
+            DoesTheProductHaveVAT = haveVAT;
+
+            //CalcVAT();
+            //CalcDiscount();
+        }
+
+        private void CalcDiscount()
+        {
+            _discountPrice = (_discount / 100) * Price;
+            Gain = _discountPrice;
+            Price -= _discountPrice;
+        }
+
+        private void CalcVAT()
+        {
+            if (!_doesTheProductHaveVAT) return;
+            //if (_discount > 0)
+            //{
+            //    var vatPrice = (Price * _vat) / 100;
+            //    Gain += (vatPrice * _discount) / 100;
+            //    Price += vatPrice;
+            //}
+            //else
+            //{
+            //    var vatPrice = (Price * _vat) / 100;
+            //    Price += vatPrice;
+            //}
+
+            var vatPrice = ((Price + _discountPrice) * _vat) / 100;
+            Gain += (vatPrice * _discount) / 100;
+            Price += vatPrice;
+        }
+
+        public string Name { get; set; }
+        public string ShortName { get; set; }
+        public double Price { get; set; }
+        public double Gain { get; private set; }
+
+        private const double _vat = 18;
+        public string VAT => DoesTheProductHaveVAT ? $"{_vat} %" : "0 %";
+
+        private bool _doesTheProductHaveVAT;
+        public bool DoesTheProductHaveVAT
+        {
+            get => _doesTheProductHaveVAT;
+            set
+            {
+                _doesTheProductHaveVAT = value;
+                if (!_doesTheProductHaveVAT) return;
+                //if (_discount > 0)
+                //{
+                //    var vatPrice = (Price * _vat) / 100;
+                //    Gain += (vatPrice * _discount) / 100;
+                //    Price += vatPrice;
+                //}
+                //else
+                //{
+                //    var vatPrice = (Price * _vat) / 100;
+                //    Price += vatPrice;
+                //}
+
+                var vatPrice = ((Price + _discountPrice) * _vat) / 100;
+                Gain += (vatPrice * _discount) / 100;
+                Price += vatPrice;
+            }
+        }
+
+        private double _discount;
+        private double _discountPrice;
+
+        
+
+        public double Discount
+        {
+            get => _discount;
+            set
+            {
+                _discount = value;
+                _discountPrice = (_discount / 100) * Price;
+                Gain = _discountPrice;
+                Price -= _discountPrice;
+            }
+        }
+
+        
+
+    }
+
+    #region student printer
+
+    public static class StudentPrinter
+    {
+        public static void Print()
+        {
             var students = new List<Student>
             {
                 new Student{Id = 1, Name = "A",Address = "12",Number = "121"},
@@ -112,7 +228,7 @@ namespace Week6.Tasks
             };
 
             ConsoleDataFormatter.PrintSeparatorLine();
-            ConsoleDataFormatter.PrintRow("Id", "Name", "Address", "Number");
+            ConsoleDataFormatter.PrintRow("Salam salam xalqi necesiz", "Name", "Address", "Number");
             ConsoleDataFormatter.PrintSeparatorLine();
 
             foreach (var item in students)
@@ -121,10 +237,9 @@ namespace Week6.Tasks
                 //Console.WriteLine(item.Id.ToString(),item.Name,item.Address,item.Number);
             }
             ConsoleDataFormatter.PrintSeparatorLine();
-
         }
-    }
 
+    }
 
     public static class ConsoleDataFormatter
     {
@@ -143,7 +258,14 @@ namespace Week6.Tasks
             const string seed = "|";
 
             string row = columns.Aggregate(seed, (separator, columnText) =>
-                separator + GetCenterAlignedText(columnText, columnWidth) + seed);
+            {
+                string centerAlignedText = separator + GetCenterAlignedText(columnText, columnWidth) + seed;
+                if (columnText.Length > columnWidth)
+                {
+
+                }
+                return centerAlignedText;
+            });
 
             Console.WriteLine(row);
         }
@@ -170,4 +292,77 @@ namespace Week6.Tasks
         public string Address { get; set; }
         public string Number { get; set; }
     }
+
+    #endregion
+
+
+    #region temp
+    //public partial class Form1 : Form
+    //{
+    //    double odenecek = 0;
+    //    //Baslangicta odenecek tutarı 0 olarak tutuyoruz.
+
+    //    public Form1()
+    //    {
+    //        InitializeComponent();
+    //    }
+
+    //    private void Form1_Load(object sender, EventArgs e)
+    //    { }
+
+    //    private void buttonHesapla_Click(object sender, EventArgs e)
+    //    {   //https://www.programlamadersleri.com
+    //        double urunKDVsiz = Convert.ToDouble(textBoxUrunFiyat.Text);
+    //        //Ürünün girilen fiyatını double tipine dönüştürüp urunKDVsiz değişkenine atıyoruz
+    //        double urunKDV = (urunKDVsiz * 0.18) + urunKDVsiz;
+    //        //Urunun KDV'li fiyatını hesaplayıp urunKDV değişkenine atıyoruz
+    //        double urunSonFiyat = 0;
+    //        //Ürünün KDV dahil hesaplanmış fiyatını başlangıç olarak 0 olarak tutuyoruz
+    //        if (radioButtonOgrenci.Checked == true)
+    //        {//Eğer öğrenci checkbox'u seçili ise öğrenci indirimi yani %3 indirim uyguluyoruz.
+    //            urunSonFiyat = Math.Round((urunKDV - (urunKDV * 0.03)), 2);
+    //            //Girilin ürünün fiyatının %5 indirimli fiyatını buluyoruz ve virgülden sonra 2 haneyi yuvarlıyoruz.
+    //            odenecek += urunSonFiyat;
+    //            //toplam odenecek fiyata eklediğimiz ürünün fiyatını ekliyoruz
+    //        }    //https://www.programlamadersleri.com
+    //        else if (radioButtonYasli.Checked == true)
+    //        {//Eğer yaşlı checkbox'u seçili ise yaşlı indirimi yani %5 indirim uyguluyoruz.
+    //            urunSonFiyat = Math.Round((urunKDV - (urunKDV * 0.05)), 2);
+    //            //Girilin ürünün fiyatının %5 indirimli fiyatını buluyoruz ve virgülden sonra 2 haneyi yuvarlıyoruz.
+    //            odenecek += urunSonFiyat;
+    //            //toplam odenecek fiyata eklediğimiz ürünün fiyatını ekliyoruz
+    //        }
+    //        else if (radioButtonHicbiri.Checked == true)
+    //        {    //https://www.programlamadersleri.com
+    //            urunSonFiyat = Math.Round(urunKDV, 2);
+    //            //Girilin ürünün virgülden sonraki 2 hanesini yuvarlıyoruz.
+    //            odenecek += urunSonFiyat;
+    //            //toplam odenecek fiyata eklediğimiz ürünün fiyatını ekliyoruz
+
+    //        }
+
+    //        listBoxAlisverisDetay.Items.Add(textBoxUrunAd.Text + " " + urunSonFiyat + " TL");
+    //        //Ürünün adını ve fiyatını listbox'a yazdırıyoruz.
+    //        textBoxTutar.Text = odenecek + " TL";
+    //        //Toplam ödenecek tutarı yazdırıyoruz.
+    //        //https://www.programlamadersleri.com
+    //        textBoxUrunAd.Clear();
+    //        //Ürün eklendikten sonra yeni ürün girişi için ürün adı bölümünü temizliyoruz.
+    //        textBoxUrunFiyat.Clear();
+    //        //Ürün eklendikten sonra yeni ürün girişi için ürün fiyat bölümünü temizliyoruz.
+
+    //    }
+
+    //    private void buttonTemizle_Click(object sender, EventArgs e)
+    //    {
+    //        //Temizle butonu ile giriln bütün verileri temziliyoruz.
+    //        listBoxAlisverisDetay.Items.Clear();
+    //        textBoxTutar.Clear();
+    //        odenecek = 0;
+    //        textBoxUrunAd.Clear();
+    //        textBoxUrunFiyat.Clear();
+
+    //    }
+    //}
+    #endregion
 }
