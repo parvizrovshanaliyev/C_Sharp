@@ -112,7 +112,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week6.Tasks", "Week6.Tasks\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCard", "ShoppingCard\ShoppingCard.csproj", "{E77F0136-E1C1-47AC-A61C-F81F4E69723A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.Inheritance", "OOP.Inheritance\OOP.Inheritance.csproj", "{99DA60E0-FB6A-41B0-9C47-D2EF2F20D00D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Inheritance", "OOP.Inheritance\OOP.Inheritance.csproj", "{99DA60E0-FB6A-41B0-9C47-D2EF2F20D00D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
