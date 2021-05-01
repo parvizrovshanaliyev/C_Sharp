@@ -20,7 +20,7 @@ namespace OOP.InnerType
                 Name = "Qedir",
                 Surname = "Qedirov",
 
-                //CustomerAddresses = new []
+                //CustomerAddresses = new[]
                 //{
                 //    new CustomerAddress
                 //    {
@@ -32,8 +32,8 @@ namespace OOP.InnerType
 
                 //    },
                 //}
-               
-               
+
+
             };
 
             // xeta verecek

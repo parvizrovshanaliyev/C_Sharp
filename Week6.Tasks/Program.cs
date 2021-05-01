@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading;
+using static Week6.Tasks.Product;
 
 namespace Week6.Tasks
 {
@@ -102,267 +104,191 @@ namespace Week6.Tasks
 
             #endregion
 
-            //StudentPrinter.Print();
-            Product product = new Product("X", 100, true, 5);
+            //Console.Clear();
+            //Console.WriteLine("xos gelmisiniz");
+            //do
+            //{
+            //    var products = new ArrayList
+            //    {
+            //        new Product{Name = "Alma", Discount = 5, HaveVAT = true,Price = 2 },
+            //        new Product{Name = "Cay", Discount = 0, HaveVAT = true,Price = 1.50 }
+            //    };
+            //    // menu
+            //    Shop.PrintMenu(products);
+
+            //    Console.Write("Menuya geri don? b/x (beli/xeyr):\t");
+
+
+            //} while (Console.ReadLine().ToUpper() != "X");
+
+            //_products.AddRange(new ArrayList
+            //{
+            //    new Product {Name = "Alma", Discount = 5, HaveVAT = true, Price = 2},
+            //    new Product{Name = "Cay", Discount = 0, HaveVAT = true,Price = 1.50 }
+            //});
+
+            var products = new ArrayList
+            {
+                new Product {Name = "Alma", Discount = 5, HaveVAT = true, Price = 2},
+                new Product{Name = "Cay", Discount = 0, HaveVAT = true,Price = 1.50 }
+            };
+            // menu
+            Product.PrintProductList(products);
+
+            var productId = Convert.ToInt32(Console.ReadLine());
+            var quantity = Convert.ToInt32(Console.ReadLine());
+
+            foreach (var item in products)
+            {
+                var product = (Product)item;
+
+                if (product.Id == productId)
+                {
+                    product.Quantity = quantity;
+                    product.CalcTotalPrice();
+
+                    Console.WriteLine($"Adi:{product.Name}  Sayi:{product.Quantity} Qiymeti:{product.Price}");
+                }
+            }
+
+            #region MyRegion
+
+            //foreach (var item in products)
+            //{
+            //    var product1 = (Product) item;
+            //    product1.CalcTotalPrice();
+            //}
+            //Product product = new Product
             //{
             //    Name = "X",
-            //    DoesTheProductHaveVAT = true,
             //    Discount = 5,
+            //    HaveVAT = true,
             //    Price = 100
             //};
-            Console.WriteLine($"Discount:{product.Discount}");
-            Console.WriteLine($"Gain:{product.Gain}");
-            Console.WriteLine($"VAT:{product.VAT}");
-            Console.WriteLine($"Price:{product.Price}");
+            ////product.CalcTotalPrice();
+            //Console.WriteLine($"Discount:{product.Discount}");
+            //Console.WriteLine($"Gain:{product.Gain}");
+            //Console.WriteLine($"VAT:{product.VAT}");
+            //Console.WriteLine($"Price:{product.Price}");
+
+            #endregion
         }
+
     }
+
 
     public class Product
     {
-        public Product(string name, double price, bool haveVAT, double discount)
-        {
-            Name = name;
-            Discount = discount;
-            Price = price;
-            DoesTheProductHaveVAT = haveVAT;
+        #region dataBase
 
-            //CalcVAT();
-            //CalcDiscount();
+        //public static ArrayList _products;
+
+        #endregion
+        public Product()
+        {
+            Id = GenerateId();
         }
 
-        private void CalcDiscount()
-        {
-            _discountPrice = (_discount / 100) * Price;
-            Gain = _discountPrice;
-            Price -= _discountPrice;
-        }
+        //static Product()
+        //{
+        //    _products = new ArrayList(); // bir defe ilk instance alinan zaman yaranacaq;
+        //}
 
-        private void CalcVAT()
-        {
-            if (!_doesTheProductHaveVAT) return;
-            //if (_discount > 0)
-            //{
-            //    var vatPrice = (Price * _vat) / 100;
-            //    Gain += (vatPrice * _discount) / 100;
-            //    Price += vatPrice;
-            //}
-            //else
-            //{
-            //    var vatPrice = (Price * _vat) / 100;
-            //    Price += vatPrice;
-            //}
+        #region fields and props
 
-            var vatPrice = ((Price + _discountPrice) * _vat) / 100;
-            Gain += (vatPrice * _discount) / 100;
-            Price += vatPrice;
-        }
-
+        private static int _id = 0;
+        private const double _vat = 18;
+        public int Id { get; }
         public string Name { get; set; }
         public string ShortName { get; set; }
         public double Price { get; set; }
+        public double Discount { get; set; }
         public double Gain { get; private set; }
+        public string VAT => HaveVAT ? $"{_vat} %" : "0 %";
+        public bool HaveVAT { get; set; }
+        public int Quantity { get; set; }
+        public double Weight { get; set; } = 0;
+        public bool QuantityOrWeight  { get; set; }
 
-        private const double _vat = 18;
-        public string VAT => DoesTheProductHaveVAT ? $"{_vat} %" : "0 %";
+        #endregion
 
-        private bool _doesTheProductHaveVAT;
-        public bool DoesTheProductHaveVAT
+        #region methods
+        public void CalcTotalPrice()
         {
-            get => _doesTheProductHaveVAT;
-            set
-            {
-                _doesTheProductHaveVAT = value;
-                if (!_doesTheProductHaveVAT) return;
-                //if (_discount > 0)
-                //{
-                //    var vatPrice = (Price * _vat) / 100;
-                //    Gain += (vatPrice * _discount) / 100;
-                //    Price += vatPrice;
-                //}
-                //else
-                //{
-                //    var vatPrice = (Price * _vat) / 100;
-                //    Price += vatPrice;
-                //}
+            double price = this.Price * this.Quantity;
 
-                var vatPrice = ((Price + _discountPrice) * _vat) / 100;
-                Gain += (vatPrice * _discount) / 100;
-                Price += vatPrice;
+            if (price > 0 && HaveVAT)
+            {
+                price += (price * _vat) / 100;
+            }
+            Gain = (price * Discount) / 100;
+            price -= Gain;
+
+            Price = price;
+        }
+
+
+        //static int GenerateId()
+        //{
+        //    return _id++;
+        //}
+
+
+        static int GenerateId()
+        {
+            /*
+             * https://docs.microsoft.com/en-us/dotnet/api/system.threading.interlocked.increment?redirectedfrom=MSDN&view=net-5.0#System_Threading_Interlocked_Increment_System_Int32__
+             */
+            return Interlocked.Increment(ref _id);
+        }
+
+        public static void PrintProductList(ArrayList products)
+        {
+            foreach (var item in products)
+            {
+                var product = (Product)item;
+
+                Console.WriteLine($"Mehsul :{product.Name} Qiymet :{product.Price}");
             }
         }
 
-        private double _discount;
-        private double _discountPrice;
-
-        
-
-        public double Discount
-        {
-            get => _discount;
-            set
-            {
-                _discount = value;
-                _discountPrice = (_discount / 100) * Price;
-                Gain = _discountPrice;
-                Price -= _discountPrice;
-            }
-        }
-
-        
-
+        #endregion
     }
-
-    #region student printer
-
-    public static class StudentPrinter
+    public static class Shop
     {
-        public static void Print()
-        {
-            var students = new List<Student>
-            {
-                new Student{Id = 1, Name = "A",Address = "12",Number = "121"},
-                new Student{Id = 2, Name = "A",Address = "12",Number = "121"},
-                new Student{Id = 3, Name = "A",Address = "12",Number = "121"},
-                new Student{Id = 4, Name = "A",Address = "12",Number = "121"},
-                new Student{Id = 5, Name = "A",Address = "12",Number = "121"}
-            };
-
-            ConsoleDataFormatter.PrintSeparatorLine();
-            ConsoleDataFormatter.PrintRow("Salam salam xalqi necesiz", "Name", "Address", "Number");
-            ConsoleDataFormatter.PrintSeparatorLine();
-
-            foreach (var item in students)
-            {
-                ConsoleDataFormatter.PrintRow(item.Id.ToString(), item.Name, item.Address, item.Number);
-                //Console.WriteLine(item.Id.ToString(),item.Name,item.Address,item.Number);
-            }
-            ConsoleDataFormatter.PrintSeparatorLine();
-        }
-
     }
-
-    public static class ConsoleDataFormatter
-    {
-        private const int TableWidth = 80;
-
-        public static void PrintSeparatorLine()
-        {
-            Console.WriteLine(new string('-', TableWidth));
-        }
-
-        public static void PrintRow(params string[] columns)
-        {
-            // (80 - 4)/4= 19
-            int columnWidth = (TableWidth - columns.Length) / columns.Length;
-
-            const string seed = "|";
-
-            string row = columns.Aggregate(seed, (separator, columnText) =>
-            {
-                string centerAlignedText = separator + GetCenterAlignedText(columnText, columnWidth) + seed;
-                if (columnText.Length > columnWidth)
-                {
-
-                }
-                return centerAlignedText;
-            });
-
-            Console.WriteLine(row);
-        }
-
-        private static string GetCenterAlignedText(string columnText, int columnWidth)
-        {
-            columnText = columnText.Length > columnWidth
-                ? columnText.Substring(0, columnWidth - 3) + "..."
-                : columnText;
-
-            //  text: id length=2
-            //  (columnWidth-((columnWidth - columnText.Length) / 2) = 19-(19-2)/2=10.5
-            string text = string.IsNullOrEmpty(columnText)
-                ? new string(' ', columnWidth)
-                : columnText.PadRight(columnWidth - ((columnWidth - columnText.Length) / 2)).PadLeft(columnWidth);
-            return text;
-        }
-    }
-
-    internal class Student
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public string Number { get; set; }
-    }
-
-    #endregion
-
-
-    #region temp
-    //public partial class Form1 : Form
+    //class ShoppingCart
     //{
-    //    double odenecek = 0;
-    //    //Baslangicta odenecek tutarı 0 olarak tutuyoruz.
+    //    private List<GroceryItem> orders;
 
-    //    public Form1()
+    //    public List<GroceryItem> Orders
     //    {
-    //        InitializeComponent();
+    //        get
+    //        {
+    //            return orders;
+    //        }
+    //        set
+    //        {
+    //            orders = value;
+    //        }
     //    }
 
-    //    private void Form1_Load(object sender, EventArgs e)
-    //    { }
-
-    //    private void buttonHesapla_Click(object sender, EventArgs e)
-    //    {   //https://www.programlamadersleri.com
-    //        double urunKDVsiz = Convert.ToDouble(textBoxUrunFiyat.Text);
-    //        //Ürünün girilen fiyatını double tipine dönüştürüp urunKDVsiz değişkenine atıyoruz
-    //        double urunKDV = (urunKDVsiz * 0.18) + urunKDVsiz;
-    //        //Urunun KDV'li fiyatını hesaplayıp urunKDV değişkenine atıyoruz
-    //        double urunSonFiyat = 0;
-    //        //Ürünün KDV dahil hesaplanmış fiyatını başlangıç olarak 0 olarak tutuyoruz
-    //        if (radioButtonOgrenci.Checked == true)
-    //        {//Eğer öğrenci checkbox'u seçili ise öğrenci indirimi yani %3 indirim uyguluyoruz.
-    //            urunSonFiyat = Math.Round((urunKDV - (urunKDV * 0.03)), 2);
-    //            //Girilin ürünün fiyatının %5 indirimli fiyatını buluyoruz ve virgülden sonra 2 haneyi yuvarlıyoruz.
-    //            odenecek += urunSonFiyat;
-    //            //toplam odenecek fiyata eklediğimiz ürünün fiyatını ekliyoruz
-    //        }    //https://www.programlamadersleri.com
-    //        else if (radioButtonYasli.Checked == true)
-    //        {//Eğer yaşlı checkbox'u seçili ise yaşlı indirimi yani %5 indirim uyguluyoruz.
-    //            urunSonFiyat = Math.Round((urunKDV - (urunKDV * 0.05)), 2);
-    //            //Girilin ürünün fiyatının %5 indirimli fiyatını buluyoruz ve virgülden sonra 2 haneyi yuvarlıyoruz.
-    //            odenecek += urunSonFiyat;
-    //            //toplam odenecek fiyata eklediğimiz ürünün fiyatını ekliyoruz
-    //        }
-    //        else if (radioButtonHicbiri.Checked == true)
-    //        {    //https://www.programlamadersleri.com
-    //            urunSonFiyat = Math.Round(urunKDV, 2);
-    //            //Girilin ürünün virgülden sonraki 2 hanesini yuvarlıyoruz.
-    //            odenecek += urunSonFiyat;
-    //            //toplam odenecek fiyata eklediğimiz ürünün fiyatını ekliyoruz
-
-    //        }
-
-    //        listBoxAlisverisDetay.Items.Add(textBoxUrunAd.Text + " " + urunSonFiyat + " TL");
-    //        //Ürünün adını ve fiyatını listbox'a yazdırıyoruz.
-    //        textBoxTutar.Text = odenecek + " TL";
-    //        //Toplam ödenecek tutarı yazdırıyoruz.
-    //        //https://www.programlamadersleri.com
-    //        textBoxUrunAd.Clear();
-    //        //Ürün eklendikten sonra yeni ürün girişi için ürün adı bölümünü temizliyoruz.
-    //        textBoxUrunFiyat.Clear();
-    //        //Ürün eklendikten sonra yeni ürün girişi için ürün fiyat bölümünü temizliyoruz.
-
-    //    }
-
-    //    private void buttonTemizle_Click(object sender, EventArgs e)
+    //    public double Calculate()
     //    {
-    //        //Temizle butonu ile giriln bütün verileri temziliyoruz.
-    //        listBoxAlisverisDetay.Items.Clear();
-    //        textBoxTutar.Clear();
-    //        odenecek = 0;
-    //        textBoxUrunAd.Clear();
-    //        textBoxUrunFiyat.Clear();
+    //        double price = 0;
+    //        if (this.Orders != null)
+    //        {
+
+    //            foreach (GroceryItem order in this.Orders)
+    //            {
+    //                price += order.Calculate();
+    //            }
+
+    //        }
+    //        return price;
 
     //    }
     //}
-    #endregion
+
+
 }
