@@ -60,6 +60,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Csharp_02", "Csharp_02", "{F27EFFAF-59E5-4FBC-BDDE-E5526F692515}"
 	ProjectSection(SolutionItems) = preProject
 		C:\Users\Asus\source\repos\PragmatechEducation\CSharp_02\README.md = C:\Users\Asus\source\repos\PragmatechEducation\CSharp_02\README.md
+		syllabus.txt = syllabus.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intro", "Intro", "{98DC75E1-33CA-4771-BBF7-5A76D91D882B}"
@@ -114,11 +115,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCard", "ShoppingCar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Inheritance", "OOP.Inheritance\OOP.Inheritance.csproj", "{99DA60E0-FB6A-41B0-9C47-D2EF2F20D00D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.Polymorphism", "OOP.Polymorphism\OOP.Polymorphism.csproj", "{DD86B80E-F1B7-46C9-AA61-3C736E71C800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Polymorphism", "OOP.Polymorphism\OOP.Polymorphism.csproj", "{DD86B80E-F1B7-46C9-AA61-3C736E71C800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.Abstraction", "OOP.Abstraction\OOP.Abstraction.csproj", "{6324AD78-3B27-4B49-A67A-E377FA631151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Abstraction", "OOP.Abstraction\OOP.Abstraction.csproj", "{6324AD78-3B27-4B49-A67A-E377FA631151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.Interface", "OOP.Interface\OOP.Interface.csproj", "{64063ECE-9CBA-4E10-94CB-50D3AA61B108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Interface", "OOP.Interface\OOP.Interface.csproj", "{64063ECE-9CBA-4E10-94CB-50D3AA61B108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
