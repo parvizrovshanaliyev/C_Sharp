@@ -6,7 +6,13 @@ namespace CSharp.PartialClass
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            #region Partial class
+
+            /*
+             *
+             */
+
+            #endregion
         }
     }
 }
