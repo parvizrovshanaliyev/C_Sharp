@@ -23,7 +23,7 @@ namespace CSharp.Arrays
 
             //Fibonacci.Arr();
 
-            JaggedArr.CreateInnerArr();
+            //JaggedArr.CreateInnerArr();
 
             // multi dimensional arr
             //SumDiagonal(Arr);

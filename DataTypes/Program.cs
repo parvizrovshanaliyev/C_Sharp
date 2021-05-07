@@ -79,7 +79,6 @@ namespace DataTypes
 
             #endregion
 
-
             #region type conversion
 
             // implicit - bilincli
@@ -253,6 +252,37 @@ namespace DataTypes
             #endregion
 
             #endregion
+
+            int[] items = Test(new[] { 1, 2, 5, 3, 5, 7, 5, 9, 11 });
+
+            foreach (var item in items)
+            {
+                Console.WriteLine(item);
+            }
         }
+
+        #region test
+
+        static int[] Test(int[] numbers)
+        {
+            int size = numbers.Length, index = 0;
+            int[] newArr =new int[size];
+
+            for (int i = 0; i < size; i++)
+            {
+                if (numbers[i] != 5)
+                {
+                    ++index;
+                    newArr[index] = numbers[i]; // index ramda 1 olsada emelliyat once geldiyinden  newArr[0]=0 yeni 1 olur
+                }
+            }
+            return newArr;
+        }
+        //static int[] test(int[] numbers)
+        //{
+
+        //    return null;
+        //}
+        #endregion
     }
 }
