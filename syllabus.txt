@@ -1,5 +1,5 @@
-﻿# Csharp_02
-Csharp-02 , start  06/03/21
+﻿# CSharp_02
+CSharp-02 , start  06/03/21
 
 ### Pragmatech Həftəsonu Proqramı
 
@@ -12,9 +12,7 @@ Csharp-02 , start  06/03/21
 - [Fərid Məmmədli](https://github.com/Ferid-Memmedli/PragmatechCsharpProject)
 - [Elcan Seyidov](https://github.com/Elcan-code/PragmatechCsharpProject.git)
 - [Kamran Hacılı](https://github.com/KHajili98/PragmatechCsharpProject)
-- [Əvəz Əliyev](https://github.com/aliyev1997/PragmatechCsharpProject)
 - [Rəşad Məmmədov](https://github.com/rashadmemmedov/PragmatechCsharpProject.git)
-- [Zaur Göyüşov](https://github.com/ZaurGoyushov/PragmatechCsharpProject)
 
 
 # Week01-Day01 06/03/21
@@ -382,5 +380,45 @@ Csharp-02 , start  06/03/21
     - - Speacialities
     - - C# 8.0 Default Implementations
 
-    ### Tasks
-   - [Week7 Tasks 'cooming soon'](https://github.com/PragmatechEducation/CSharp_02/blob/main)
+   ### Tasks
+   - [Week7 Tasks](https://github.com/PragmatechEducation/CSharp_02/blob/main/Week7.Tasks/Program.cs)
+
+# Week08-Day01 08/05/21
+
+### Topics
+    - Partial Class
+    - OOP Enum
+    - - Enum : Inheritance
+    - - Conversions
+    - - Enum naming conventions
+    - - Converts int to enum values : ToObject()
+    - - Convert a string to an enum : Parse()
+    - - Enum.GetNames()
+    - - Enum.GetValues()
+    - - Enum.IsDefined()
+    - - Enum in a Switch Statement
+    - - How to enumerate an enum : foreach
+    - Generic Collections
+    - - Non Generic Collections vs Generic Collections
+    - - Type Safety c# 1.0 with methods
+    - - Type Safety c# 1.0 with methods
+    - - List<T>
+    - - - List<T> vs ArrayList
+    - - - Add()
+    - - - AddRange()
+    - - - Insert()
+    - - - Remove()
+    - - - RemoveAll()
+    - - - RemoveAt()
+    - - - Any()
+    - - - Sort()
+    - - - Max()
+    - - - Min()
+    - - Dictionary<K,T>
+    - - - Dictionary<K,T> vs Hastable
+    - - - Add()
+
+# Week08-Day02 09/05/21
+
+### Topics
+    - Generic

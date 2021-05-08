@@ -60,7 +60,7 @@ namespace CSharp.OOP.Enum
             #region selectedDay
 
             Days selectedDay = Days.Saturday;
-
+           
             #region conditional case
             if (selectedDay == Days.Saturday || selectedDay == Days.Sunday)
             {
@@ -113,6 +113,7 @@ namespace CSharp.OOP.Enum
                 Name = "User1",
                 Type = 1 // yeni admin
             };
+            
             UserWithoutEnum user2 = new()
             {
                 Id = 1,
