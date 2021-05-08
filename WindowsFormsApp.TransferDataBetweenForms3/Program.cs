@@ -1,7 +1,8 @@
-
-
 using System;
-using System.Net.Mime;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp.TransferDataBetweenForms3
 {
@@ -13,10 +14,10 @@ namespace WindowsFormsApp.TransferDataBetweenForms3
         [STAThread]
         static void Main()
         {
-            MediaTypeNames.Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            MediaTypeNames.Application.EnableVisualStyles();
-            MediaTypeNames.Application.SetCompatibleTextRenderingDefault(false);
-            MediaTypeNames.Application.Run(new Login());
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }

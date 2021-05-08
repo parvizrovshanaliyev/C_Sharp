@@ -136,7 +136,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Generic", "CSharp-02
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp.WinFormsIntro", "CSharp-02\WindowsFormsApp\WindowsFormsApp.WinFormsIntro\WindowsFormsApp.WinFormsIntro.csproj", "{D5E1832B-D82F-4DAA-A159-F284122DDC7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp.TransferDataBetweenForms2", "WindowsFormsApp.TransferDataBetweenForms2\WindowsFormsApp.TransferDataBetweenForms2.csproj", "{39B75ED8-A43C-4C2B-9AC5-1F26A99D0725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp.TransferDataBetweenForms2", "WindowsFormsApp.TransferDataBetweenForms2\WindowsFormsApp.TransferDataBetweenForms2.csproj", "{39B75ED8-A43C-4C2B-9AC5-1F26A99D0725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp.TransferDataBetweenForms3", "WindowsFormsApp.TransferDataBetweenForms3\WindowsFormsApp.TransferDataBetweenForms3.csproj", "{1081E4B0-8220-4006-BBE7-AFA72F330982}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -324,6 +326,10 @@ Global
 		{39B75ED8-A43C-4C2B-9AC5-1F26A99D0725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39B75ED8-A43C-4C2B-9AC5-1F26A99D0725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39B75ED8-A43C-4C2B-9AC5-1F26A99D0725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1081E4B0-8220-4006-BBE7-AFA72F330982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1081E4B0-8220-4006-BBE7-AFA72F330982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1081E4B0-8220-4006-BBE7-AFA72F330982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1081E4B0-8220-4006-BBE7-AFA72F330982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -380,6 +386,7 @@ Global
 		{ADE21090-F686-4247-BB34-93656097A01C} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
 		{D5E1832B-D82F-4DAA-A159-F284122DDC7C} = {CF0DF44A-33C1-4E14-B5D8-445293821039}
 		{39B75ED8-A43C-4C2B-9AC5-1F26A99D0725} = {CF0DF44A-33C1-4E14-B5D8-445293821039}
+		{1081E4B0-8220-4006-BBE7-AFA72F330982} = {CF0DF44A-33C1-4E14-B5D8-445293821039}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}

@@ -16,5 +16,6 @@ namespace WindowsFormsApp.TransferDataBetweenForms3
         {
             InitializeComponent();
         }
+
     }
 }
