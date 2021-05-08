@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.OOP.Enum", "CSharp-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.GenericCollections", "CSharp-02\CSharp\CSharp.GenericCollections\CSharp.GenericCollections.csproj", "{149CC928-48E7-4519-A092-0826348F629B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Generic", "CSharp-02\CSharp\CSharp.Generic\CSharp.Generic.csproj", "{ADE21090-F686-4247-BB34-93656097A01C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,10 @@ Global
 		{149CC928-48E7-4519-A092-0826348F629B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{149CC928-48E7-4519-A092-0826348F629B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{149CC928-48E7-4519-A092-0826348F629B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE21090-F686-4247-BB34-93656097A01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE21090-F686-4247-BB34-93656097A01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE21090-F686-4247-BB34-93656097A01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE21090-F686-4247-BB34-93656097A01C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -370,6 +376,7 @@ Global
 		{EE745BD1-3D0A-41AD-9DE9-580022296D31} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
 		{D5E050B9-50EB-40C9-9B02-920A24EBBAC7} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
 		{149CC928-48E7-4519-A092-0826348F629B} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
+		{ADE21090-F686-4247-BB34-93656097A01C} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
