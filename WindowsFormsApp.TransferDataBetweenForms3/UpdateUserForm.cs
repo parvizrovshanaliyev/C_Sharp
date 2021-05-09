@@ -22,8 +22,23 @@ namespace WindowsFormsApp.TransferDataBetweenForms3
             usernameTextBox.Text = user.Username;
             passwordTextBox.Text = user.Password;
             descTextArea.Text = user.Desc;
+            updateBtn.Tag = user.Id;
         }
 
-       
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            Button button = (Button) sender;
+            int userId = (int)button.Tag;
+
+            var userIndex = VirtualDatabase.userList.FindIndex(i => i.Id == userId);
+            VirtualDatabase.userList[userIndex].Name = nameTextBox.Text;
+            VirtualDatabase.userList[userIndex].Surname = surnameTextBox.Text;
+            VirtualDatabase.userList[userIndex].Password = passwordTextBox.Text;
+            VirtualDatabase.userList[userIndex].Desc = descTextArea.Text;
+
+            MessageBox.Show("Ugurla redakte edildi", "good", MessageBoxButtons.OK);
+            Close();
+
+        }
     }
 }

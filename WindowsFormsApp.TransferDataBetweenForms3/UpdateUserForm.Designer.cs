@@ -50,6 +50,7 @@ namespace WindowsFormsApp.TransferDataBetweenForms3
             this.updateBtn.TabIndex = 0;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // nameLbl
             // 
@@ -111,20 +112,18 @@ namespace WindowsFormsApp.TransferDataBetweenForms3
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.Enabled = false;
             this.usernameTextBox.Location = new System.Drawing.Point(365, 157);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(196, 27);
             this.usernameTextBox.TabIndex = 8;
-            this.usernameTextBox.Enabled = false;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Enabled = false;
             this.passwordTextBox.Location = new System.Drawing.Point(61, 157);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(196, 27);
             this.passwordTextBox.TabIndex = 9;
-            this.passwordTextBox.Enabled = true;
             // 
             // descLbl
             // 

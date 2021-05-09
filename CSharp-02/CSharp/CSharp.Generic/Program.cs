@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace CSharp.Generic
@@ -41,6 +40,28 @@ namespace CSharp.Generic
              * *** Generic Type Parameters
              * *** Generic Interface
              * *** Generic Constraint
+             *
+             * where T : struct          T value type olmalidir.
+             * where T : class           T reference type olmalidir.
+             * where T : new()           T default ctor parametrsiz.
+             * where T : class_name      T inheritance alimis olmalidir.
+             * where T : interface_name  T implement edilmis olmalidir.
+             *
+             *
+             * *** Inheritance
+             * MyClass1<T> formasinda teyin edilen class-lar "open-constructed generic" adlanir.
+             * MyClass1<int> formasinda "closed-constructed generic"
+             *
+             * Open-constructed generic, closed-constructed generic-den inheritance ala biler.
+             * Open-constructed generic oz tipinde classdan inheritance ala biler.
+             *
+             * Generic olmayan class closed-constructed generic-den inheritance ala biler lakin
+             * open-constructed generic-den ala bilmez
+             *
+             * public class MyClass : MyClass1<int>
+             *
+             * public class MyClass : MyClass1<T>  *** olmaz ***
+             *
              */
             #endregion
 
@@ -67,7 +88,7 @@ namespace CSharp.Generic
                 CustomerNo = 1
             };
 
-            CustomerGeneric<Guid> customerGeneric1 = new CustomerGeneric<Guid> {Id = Guid.NewGuid()};
+            CustomerGeneric<Guid> customerGeneric1 = new CustomerGeneric<Guid> { Id = Guid.NewGuid() };
 
             #endregion
 
@@ -98,8 +119,38 @@ namespace CSharp.Generic
 
             Console.ReadLine();
             #endregion
+
+            #region generic method copy<T>
+
+            List<int> lst1 = new List<int>();
+            lst1.Add(2);
+            lst1.Add(4);
+
+            List<int> lst2 = new List<int>();
+            GenericMethodClassExample.Copy(lst1, lst2);
+            Console.WriteLine(lst2.Count);
+            #endregion
             #endregion
         }
+
+        #region Constraint
+
+        //public static T Max<T>(T op1, T op2)
+        //{
+        //    if (op1.CompareTo(op2) < 0) // xeta verecek cunki bilmir hansi tip gelir
+        //        return op1;
+        //    return op2;
+        //}
+
+
+        // gelen tip bu interface implemet edecek deye xeta vermeyecek
+        public static T Max<T>(T op1, T op2) where T : IComparable
+        {
+            if (op1.CompareTo(op2) < 0)
+                return op1;
+            return op2;
+        }
+        #endregion
     }
 
     #region examples
@@ -207,7 +258,6 @@ namespace CSharp.Generic
 
     }
     #endregion
-
     #region CLR desteyi
     public class MyList<T>
     {
@@ -223,5 +273,20 @@ namespace CSharp.Generic
     class SampleClass { }
 
     #endregion
+    #region generic method copy<T>
+
+    public static class GenericMethodClassExample
+    {
+        public static void Copy<T>(List<T> source, List<T> destination)
+        {
+            foreach (T obj in source)
+            {
+                destination.Add(obj);
+            }
+        }
+    }
+
+    #endregion
+
     #endregion
 }
