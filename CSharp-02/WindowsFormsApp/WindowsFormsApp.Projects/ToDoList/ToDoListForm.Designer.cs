@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlOperationList = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpBoxOperations = new System.Windows.Forms.GroupBox();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnGetAll = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnGetAll = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDateTime = new System.Windows.Forms.Panel();
             this.lblDateTime = new System.Windows.Forms.Label();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.pnlOperationList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpBoxOperations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDateTime.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,14 +54,6 @@
             this.pnlOperationList.Size = new System.Drawing.Size(240, 750);
             this.pnlOperationList.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 150);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // grpBoxOperations
             // 
             this.grpBoxOperations.Controls.Add(this.btnExit);
@@ -72,14 +66,15 @@
             this.grpBoxOperations.TabStop = false;
             this.grpBoxOperations.Text = "Operations Menu";
             // 
-            // btnNew
+            // btnExit
             // 
-            this.btnNew.Location = new System.Drawing.Point(6, 43);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(207, 42);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(6, 163);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(207, 42);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnGetAll
             // 
@@ -90,28 +85,40 @@
             this.btnGetAll.Text = "Get All";
             this.btnGetAll.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // btnNew
             // 
-            this.btnExit.Location = new System.Drawing.Point(6, 163);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(207, 42);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnNew.Location = new System.Drawing.Point(6, 43);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(207, 42);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ToDoList.Properties.Resources.todo_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlDateTime
             // 
             this.pnlDateTime.Controls.Add(this.lblDateTime);
-            this.pnlDateTime.Location = new System.Drawing.Point(1066, 711);
+            this.pnlDateTime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlDateTime.Location = new System.Drawing.Point(240, 712);
             this.pnlDateTime.Name = "pnlDateTime";
-            this.pnlDateTime.Size = new System.Drawing.Size(215, 38);
+            this.pnlDateTime.Size = new System.Drawing.Size(1041, 38);
             this.pnlDateTime.TabIndex = 2;
             // 
             // lblDateTime
             // 
             this.lblDateTime.AutoSize = true;
             this.lblDateTime.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateTime.Location = new System.Drawing.Point(21, 0);
+            this.lblDateTime.Location = new System.Drawing.Point(850, 0);
             this.lblDateTime.Name = "lblDateTime";
             this.lblDateTime.Size = new System.Drawing.Size(179, 31);
             this.lblDateTime.TabIndex = 0;
@@ -128,9 +135,10 @@
             this.IsMdiContainer = true;
             this.Name = "ToDoListForm";
             this.Text = "ToDoList";
+            this.Load += new System.EventHandler(this.ToDoListForm_Load);
             this.pnlOperationList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpBoxOperations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDateTime.ResumeLayout(false);
             this.pnlDateTime.PerformLayout();
             this.ResumeLayout(false);
@@ -147,6 +155,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlDateTime;
         private System.Windows.Forms.Label lblDateTime;
+        private System.Windows.Forms.Timer timerDateTime;
     }
 }
 
