@@ -31,8 +31,4 @@ namespace ToDoList.Business.Concrete
 
         #endregion
     }
-
-    public class TodoService:ITodoService
-    {
-    }
 }

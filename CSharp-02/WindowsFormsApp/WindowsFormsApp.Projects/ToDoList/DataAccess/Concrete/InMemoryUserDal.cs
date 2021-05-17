@@ -13,12 +13,12 @@ namespace ToDoList.DataAccess.Concrete
     {
         #region fields
 
-        private readonly List<UserEntity> _userEntities;
+        private static readonly List<UserEntity> _userEntities;
 
         #endregion
         #region ctor
 
-        public InMemoryUserDal()
+        static InMemoryUserDal()
         {
             _userEntities = new List<UserEntity>
             {
@@ -54,45 +54,6 @@ namespace ToDoList.DataAccess.Concrete
             var user = _userEntities.SingleOrDefault(i => i.Username == username && i.Password == password);
 
             return user;
-        }
-
-        #endregion
-    }
-
-    public class InMemoryTodoDal : ITodoDal
-    {
-        #region fields
-
-        private readonly List<TodoEntity> _todoEntities;
-        #endregion
-        #region ctor
-
-        public InMemoryTodoDal()
-        {
-            _todoEntities = new List<TodoEntity>();
-        }
-
-        #endregion
-        #region Implementation of ITodoDal
-
-        public List<TodoEntity> GetAll()
-        {
-            return _todoEntities;
-        }
-
-        public void Add(TodoEntity todo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(TodoEntity todo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(TodoEntity todo)
-        {
-            throw new NotImplementedException();
         }
 
         #endregion

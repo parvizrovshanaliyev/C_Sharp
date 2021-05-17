@@ -40,6 +40,8 @@ namespace Week6.Tasks
 
             //  text: id length=2
             //  (columnWidth-((columnWidth - columnText.Length) / 2) = 19-(19-2)/2=10.5
+
+
             string text = string.IsNullOrEmpty(columnText)
                 ? new string(' ', columnWidth)
                 : columnText.PadRight(columnWidth - ((columnWidth - columnText.Length) / 2)).PadLeft(columnWidth);

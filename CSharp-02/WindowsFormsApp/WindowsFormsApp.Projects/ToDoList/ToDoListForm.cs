@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ToDoList.Business.Abstract;
+using ToDoList.Business.Concrete;
+using ToDoList.Constants;
+using ToDoList.DataAccess.Concrete;
 
 namespace ToDoList
 {
@@ -8,13 +12,15 @@ namespace ToDoList
     {
         #region fields
 
-        private Form form;
+        private Form _form;
+        private readonly ITodoService _todoService;
         #endregion
         #region ctor
 
         public ToDoListForm()
         {
             InitializeComponent();
+            _todoService = new TodoService(new InMemoryTodoDal());
         }
 
         #endregion
@@ -28,49 +34,99 @@ namespace ToDoList
 
             // login
             Login loginForm = new Login();
-            //loginForm.MdiParent = this;
-            //loginForm.StartPosition = FormStartPosition.CenterParent;
-            ////loginForm.StartPosition = FormStartPosition.Manual;
-            ////loginForm.Location = new Point((this.ClientSize.Width - loginForm.Width) / 2,
-            ////    (this.ClientSize.Height - this.Height) / 2);
-            //loginForm.Show();
 
-            #region MyRegion
-            //Set location by manually to set modless dialog(form)center of the parent form(parent)
-
-            //form.StartPosition = FormStartPosition.Manual;
-            //form.Location = new Point(parent.Location.X + (parent.Width - form.Width) / 2, parent.Location.Y + (parent.Height - form.Height) / 2);
-            //form..Show(parent);
-
-            //In dot net 4.0 - User remove control box and FormBorderStyle not sizable
-            //    along with the set location manually:
-            //form.ControlBox = false;
-            //form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-
-            //problem is:
-            //In dot net version 4.0 it is problem of cutoff the dialog from bottom(lower part of dialog not show when run)
-
-            //solution is
-            //    Set Localizable property of the form as true
-            loginForm.MdiParent = this;
-            loginForm.StartPosition = FormStartPosition.CenterScreen;
-            //loginForm.Location = new Point(this.Location.X + (this.Width - loginForm.Width) / 2, this.Location.Y + (this.Height - loginForm.Height) / 2);
-            loginForm.Show();
-            loginForm.ControlBox = false;
-            loginForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            #endregion
+            CenterParent(this, loginForm);
 
             // sideBar
             GrpBoxOperationButtonsEnableDisable(false);
         }
 
+        #region menu
+
+        #region 1.New
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["NewTodoForm"] != null)
+            {
+                _form = Application.OpenForms["NewTodoForm"];
+                _form.Focus();
+            }
+            else
+            {
+                _form = new NewTodoForm();
+                _form.MdiParent = Application.OpenForms["ToDoListForm"];
+                _form.StartPosition = FormStartPosition.CenterScreen;
+                _form.Show();
+            }
+        }
+
+        #endregion
+
+        #region 2. getAll
+
+        private void btnGetAll_Click(object sender, EventArgs e)
+        {
+
+            if (Application.OpenForms["GetAllForm"] != null)
+            {
+                _form = Application.OpenForms["GetAllForm"];
+                _form.Focus();
+            }
+            else
+            {
+                if (_todoService.Count() > 0)
+                {
+                    GetAllForm getAllForm = new GetAllForm();
+                    getAllForm.MdiParent = Application.OpenForms["ToDoListForm"];
+                    getAllForm.StartPosition = FormStartPosition.CenterScreen;
+                    getAllForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show(GlobalConstants.EmptyList, GlobalConstants.CaptionInfo, MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+            }
+            
+        }
+
+        #endregion
+        #region 3. exit
+
+        /// <summary>
+        /// Application Exit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        #endregion
+
+        #region helper methods
+        private void TimerDateTime_Tick(object sender, EventArgs e)
+        {
+            lblDateTime.Text = DateTime.Now.ToString("g");
+        }
         private void GetDateTime()
         {
             timerDateTime.Interval = 15000;
             timerDateTime.Tick += TimerDateTime_Tick;
             timerDateTime.Start();
         }
-
+        private void CenterParent(Form parentForm, Form childForm)
+        {
+            childForm.MdiParent = parentForm;
+            childForm.StartPosition = FormStartPosition.Manual;
+            childForm.Left = childForm.Parent.Width - ((childForm.Parent.Width - childForm.Width) / 2);
+            childForm.Top = childForm.Parent.Height - ((childForm.Parent.Height - childForm.Height) / 2);
+            childForm.Show();
+        }
         /// <summary>
         /// Todolist form icerisindeki emeliyyatlarin form acilarken deaktiv edilmesi
         /// </summary>
@@ -85,33 +141,8 @@ namespace ToDoList
                 }
             }
         }
+        #endregion
 
-        private void TimerDateTime_Tick(object sender, EventArgs e)
-        {
-            lblDateTime.Text = DateTime.Now.ToString("g");
-        }
-        /// <summary>
-        /// Application Exit
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            if (Application.OpenForms["NewTodoForm"] != null)
-            {
-                form = Application.OpenForms["NewTodoForm"];
-                form.Focus();
-            }
-            else
-            {
-                form = new NewTodoForm {MdiParent = this};
-                form.Show();
-            }
-        }
         #endregion
 
 

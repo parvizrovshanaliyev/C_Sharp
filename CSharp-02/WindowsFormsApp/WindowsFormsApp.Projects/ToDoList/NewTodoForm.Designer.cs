@@ -30,13 +30,13 @@ namespace ToDoList
         private void InitializeComponent()
         {
             this.lblImportanceLevel = new System.Windows.Forms.Label();
-            this.txtBoxTitle = new System.Windows.Forms.TextBox();
+            this.txtBoxImportanceLevel = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.txtBoxDesc = new System.Windows.Forms.TextBox();
             this.lblShortDesc = new System.Windows.Forms.Label();
             this.txtBoxShortDesc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtBoxTitle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.cmbBoxStatus = new System.Windows.Forms.ComboBox();
@@ -51,14 +51,14 @@ namespace ToDoList
             this.lblImportanceLevel.TabIndex = 0;
             this.lblImportanceLevel.Text = "Importance Level";
             // 
-            // txtBoxTitle
+            // txtBoxImportanceLevel
             // 
-            this.txtBoxTitle.Location = new System.Drawing.Point(160, 375);
-            this.txtBoxTitle.Name = "txtBoxTitle";
-            this.txtBoxTitle.Size = new System.Drawing.Size(293, 27);
-            this.txtBoxTitle.TabIndex = 3;
-            this.txtBoxTitle.Enter += new System.EventHandler(this.txtBox_Enter);
-            this.txtBoxTitle.Leave += new System.EventHandler(this.txtBox_Leave);
+            this.txtBoxImportanceLevel.Location = new System.Drawing.Point(160, 375);
+            this.txtBoxImportanceLevel.Name = "txtBoxImportanceLevel";
+            this.txtBoxImportanceLevel.Size = new System.Drawing.Size(293, 27);
+            this.txtBoxImportanceLevel.TabIndex = 3;
+            this.txtBoxImportanceLevel.Enter += new System.EventHandler(this.txtBox_Enter);
+            this.txtBoxImportanceLevel.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
             // lblDesc
             // 
@@ -107,14 +107,14 @@ namespace ToDoList
             this.label3.TabIndex = 0;
             this.label3.Text = "Title";
             // 
-            // textBox3
+            // txtBoxTitle
             // 
-            this.textBox3.Location = new System.Drawing.Point(160, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(293, 27);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.Enter += new System.EventHandler(this.txtBox_Enter);
-            this.textBox3.Leave += new System.EventHandler(this.txtBox_Leave);
+            this.txtBoxTitle.Location = new System.Drawing.Point(160, 39);
+            this.txtBoxTitle.Name = "txtBoxTitle";
+            this.txtBoxTitle.Size = new System.Drawing.Size(293, 27);
+            this.txtBoxTitle.TabIndex = 0;
+            this.txtBoxTitle.Enter += new System.EventHandler(this.txtBox_Enter);
+            this.txtBoxTitle.Leave += new System.EventHandler(this.txtBox_Leave);
             // 
             // label4
             // 
@@ -155,10 +155,10 @@ namespace ToDoList
             this.Controls.Add(this.txtBoxDesc);
             this.Controls.Add(this.lblShortDesc);
             this.Controls.Add(this.lblDesc);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtBoxTitle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtBoxTitle);
+            this.Controls.Add(this.txtBoxImportanceLevel);
             this.Controls.Add(this.lblImportanceLevel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "NewTodoForm";
@@ -173,13 +173,13 @@ namespace ToDoList
         #endregion
 
         private System.Windows.Forms.Label lblImportanceLevel;
-        private System.Windows.Forms.TextBox txtBoxTitle;
+        private System.Windows.Forms.TextBox txtBoxImportanceLevel;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.TextBox txtBoxDesc;
         private System.Windows.Forms.Label lblShortDesc;
         private System.Windows.Forms.TextBox txtBoxShortDesc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBoxTitle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cmbBoxStatus;

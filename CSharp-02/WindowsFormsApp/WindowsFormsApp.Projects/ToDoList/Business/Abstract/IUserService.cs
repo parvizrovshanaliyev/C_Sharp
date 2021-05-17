@@ -11,9 +11,4 @@ namespace ToDoList.Business.Abstract
     {
         UserEntity GetUser(string username, string password);
     }
-
-
-    public interface ITodoService
-    {
-    }
 }

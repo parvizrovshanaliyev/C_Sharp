@@ -63,5 +63,10 @@ namespace ToDoList
                     MessageBoxIcon.Information);
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //this.CenterToParent();
+        }
     }
 }
