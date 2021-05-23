@@ -144,6 +144,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WindowsFormsApp.Projects", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "CSharp-02\WindowsFormsApp\WindowsFormsApp.Projects\ToDoList\ToDoList.csproj", "{6622B52D-8D3B-4C05-A98E-BA8D51995A51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Ildasm", "CSharp-02\CSharp\CSharp.Ildasm\CSharp.Ildasm.csproj", "{EDC4DB57-CA27-4612-93C9-7D40CF83A6FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp.MessageBoxNotification", "CSharp-02\WindowsFormsApp\WindowsFormsApp.MessageBoxNotification\WindowsFormsApp.MessageBoxNotification.csproj", "{021995E9-03DB-453C-8D63-9FFDC226A622}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -338,6 +342,14 @@ Global
 		{6622B52D-8D3B-4C05-A98E-BA8D51995A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6622B52D-8D3B-4C05-A98E-BA8D51995A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6622B52D-8D3B-4C05-A98E-BA8D51995A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC4DB57-CA27-4612-93C9-7D40CF83A6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC4DB57-CA27-4612-93C9-7D40CF83A6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC4DB57-CA27-4612-93C9-7D40CF83A6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC4DB57-CA27-4612-93C9-7D40CF83A6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021995E9-03DB-453C-8D63-9FFDC226A622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021995E9-03DB-453C-8D63-9FFDC226A622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021995E9-03DB-453C-8D63-9FFDC226A622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021995E9-03DB-453C-8D63-9FFDC226A622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -397,6 +409,8 @@ Global
 		{A5ADBFF5-C459-4712-AB1B-4E0C8495F8C4} = {CF0DF44A-33C1-4E14-B5D8-445293821039}
 		{36572B84-13B3-443D-B45C-55C2F41E5E31} = {CF0DF44A-33C1-4E14-B5D8-445293821039}
 		{6622B52D-8D3B-4C05-A98E-BA8D51995A51} = {36572B84-13B3-443D-B45C-55C2F41E5E31}
+		{EDC4DB57-CA27-4612-93C9-7D40CF83A6FE} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
+		{021995E9-03DB-453C-8D63-9FFDC226A622} = {CF0DF44A-33C1-4E14-B5D8-445293821039}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
