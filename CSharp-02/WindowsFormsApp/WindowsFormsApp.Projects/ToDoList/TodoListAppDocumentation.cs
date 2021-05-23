@@ -1,7 +1,4 @@
 ﻿
-
-
-
 #region ToDoListDocument
 /*
  * 1. todolist form acilacaq onun icerisinde login formu olmalidir, bu ikinci form
