@@ -20,6 +20,7 @@ namespace ToDoList
         public ToDoListForm()
         {
             InitializeComponent();
+
             _todoService = new TodoService(new InMemoryTodoDal());
         }
 
@@ -62,7 +63,6 @@ namespace ToDoList
         }
 
         #endregion
-
         #region 2. getAll
 
         private void btnGetAll_Click(object sender, EventArgs e)
