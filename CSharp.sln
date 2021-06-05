@@ -160,6 +160,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemIO.FileOperations.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemIOWinForms", "CSharp-02\CSharp\SystemIO.DirectoryOperations\SystemIOWinForms\SystemIOWinForms.csproj", "{A3F8C76D-A545-4954-A11C-899CBC5C5732}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExceptionHandling", "ExceptionHandling", "{6C734064-8F1C-4019-9AB7-CA9A3CD93785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.TryCatch", "CSharp-02\CSharp\ExceptionHandling\ExceptionHandling.TryCatch\ExceptionHandling.TryCatch.csproj", "{C16EFBB8-5BC1-4A66-AE91-63D948219CA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -382,6 +386,10 @@ Global
 		{A3F8C76D-A545-4954-A11C-899CBC5C5732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3F8C76D-A545-4954-A11C-899CBC5C5732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3F8C76D-A545-4954-A11C-899CBC5C5732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C16EFBB8-5BC1-4A66-AE91-63D948219CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16EFBB8-5BC1-4A66-AE91-63D948219CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16EFBB8-5BC1-4A66-AE91-63D948219CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16EFBB8-5BC1-4A66-AE91-63D948219CA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -449,6 +457,8 @@ Global
 		{EA911301-1DC4-4117-907F-F8BE868FB1AB} = {A14C59F0-B84A-4B10-A8B0-EC10AC7C3918}
 		{77CFFB95-FD59-4882-8FF4-A417F074CDD7} = {A14C59F0-B84A-4B10-A8B0-EC10AC7C3918}
 		{A3F8C76D-A545-4954-A11C-899CBC5C5732} = {A14C59F0-B84A-4B10-A8B0-EC10AC7C3918}
+		{6C734064-8F1C-4019-9AB7-CA9A3CD93785} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
+		{C16EFBB8-5BC1-4A66-AE91-63D948219CA0} = {6C734064-8F1C-4019-9AB7-CA9A3CD93785}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
