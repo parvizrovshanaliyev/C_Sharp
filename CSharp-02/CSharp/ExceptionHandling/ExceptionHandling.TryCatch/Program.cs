@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ExceptionHandling.TryCatch
 {
@@ -53,7 +54,7 @@ namespace ExceptionHandling.TryCatch
             #endregion
         }
 
-        #region tryCatch
+        #region tryCatch1
 
         static void ExceptionHandlingTrCatch()
         {
@@ -93,7 +94,51 @@ namespace ExceptionHandling.TryCatch
 
             }
         }
-        
+
+
+        #endregion
+
+        #region tryCatch2
+        // Assume that we want to read all text in a certain
+
+        static void FileOperation()
+        {
+            try
+            {
+                string path = "";
+                string path1 = "1212!$#@@";
+                string path2 = "C:\\Argument";
+                string path3 = "C:\\Argument\\test";
+                string text = File.ReadAllText(path);
+            }
+            catch (FileNotFoundException fileNotFoundException)
+            {
+
+                Console.WriteLine("path1/ file not found:\n:" + fileNotFoundException.Message);
+            }
+            catch (DirectoryNotFoundException directoryNotFoundException)
+            {
+
+                Console.WriteLine("path3/ directoryNotFoundException :\n:" + directoryNotFoundException.Message);
+            }
+            catch (ArgumentException argumentException)
+            {
+                Console.WriteLine("path1/ is invalid:\n:" + argumentException.Message);
+            }
+            catch (IOException ioException)
+            {
+                Console.WriteLine("reading a file failure:\n:" + ioException.Message);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("path/ something is wrong:\n:" + e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("leaving read text operation");
+            }
+        }
 
         #endregion
         static void EnterNumber()

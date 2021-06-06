@@ -44,7 +44,6 @@ namespace SystemIO.DirectoryOperations.Console
 
             #endregion
 
-
             #region Directory.CreateDirectory
             /*
              *  Directory.CreateDirectory vasitesile daxil edilen adresde yeni folder yarada bilerik.
