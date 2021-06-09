@@ -17,7 +17,7 @@ namespace SystemIOWinForms
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReadTextDocForm());
+            Application.Run(new DirectoriesInfoForm());
         }
     }
 }
