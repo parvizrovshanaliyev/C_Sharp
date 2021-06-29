@@ -170,6 +170,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Delagates", "Delagates", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delagates_1", "CSharp-02\CSharp\Delagates\Delagates_1\Delagates_1.csproj", "{EF7CAE81-35F6-4D82-BEB6-4AA77B536110}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate_MicrosoftDoc", "CSharp-02\CSharp\Delagates\Delegate_MicrosoftDoc\Delegate_MicrosoftDoc.csproj", "{22E6D6D4-A633-4C8F-8B50-F80A87523F8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -404,6 +406,10 @@ Global
 		{EF7CAE81-35F6-4D82-BEB6-4AA77B536110}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF7CAE81-35F6-4D82-BEB6-4AA77B536110}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF7CAE81-35F6-4D82-BEB6-4AA77B536110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E6D6D4-A633-4C8F-8B50-F80A87523F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E6D6D4-A633-4C8F-8B50-F80A87523F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E6D6D4-A633-4C8F-8B50-F80A87523F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E6D6D4-A633-4C8F-8B50-F80A87523F8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -476,6 +482,7 @@ Global
 		{048C3C6F-A225-4E68-A34C-6EB6362A8D95} = {6C734064-8F1C-4019-9AB7-CA9A3CD93785}
 		{6C409983-0EB9-4CA1-A4AB-17F10AB12512} = {51A115CB-62D5-4686-BDCE-92E26A24AC52}
 		{EF7CAE81-35F6-4D82-BEB6-4AA77B536110} = {6C409983-0EB9-4CA1-A4AB-17F10AB12512}
+		{22E6D6D4-A633-4C8F-8B50-F80A87523F8C} = {6C409983-0EB9-4CA1-A4AB-17F10AB12512}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E594F15-94FA-413E-9E17-0D6B84C53408}
